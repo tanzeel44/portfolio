@@ -35,3 +35,4 @@ yarn-error.log*
 
 # eslint config
 .eslintrc.js
+styles/Home.module.css

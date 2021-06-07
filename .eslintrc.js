@@ -2,7 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    'jest/globals': true,
+    jest: true,
   },
   extends: 'airbnb',
   parserOptions: {
@@ -15,7 +15,9 @@ module.exports = {
   plugins: [
     'react', 'jest',
   ],
-  rules: {  
+  rules: {
+    'react/react-in-jsx-scope': 0,
+    'linebreak-style': 'windows',
   },
   settings: {
     react: {

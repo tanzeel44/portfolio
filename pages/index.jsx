@@ -1,15 +1,17 @@
 import Head from 'next/head';
 
+import Header from '../components/Header';
+
 export default function Home() {
   return (
     <div>
       <Head>
         <title>Tanzeel</title>
-        <meta name="description" content="Tanzeel ur Rehman's Web Development Portfolio" />
+        <meta name="description" content="Tanzeel ur Rehman's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Come to Axe!</h1>
+        <Header/>
       </main>
     </div>
   );

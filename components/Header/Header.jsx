@@ -1,4 +1,4 @@
-import Hamburger from './Hamburger/Hamburger';
+import Hamburger from './Hamburger';
 
 export default function Header() {
   return (

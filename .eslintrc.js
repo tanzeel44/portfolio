@@ -17,7 +17,7 @@ module.exports = {
   ],
   rules: {
     'react/react-in-jsx-scope': 0,
-    'linebreak-style': 'windows',
+    'linebreak-style': [1, 'windows'],
   },
   settings: {
     react: {

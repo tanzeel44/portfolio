@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledMenuIcon = styled.div`
+const StyledHamburger = styled.div`
   position: relative;
   width: 50px;
   height: 50px;
@@ -35,7 +35,7 @@ const StyledMenuIcon = styled.div`
     display: block;
     width: 100%;
     height: 2px;
-    background-color: var(--bar-bg, #000);
+    background-color: #000;
     border-radius: 1px;
     transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 
@@ -85,12 +85,12 @@ const StyledMenuIcon = styled.div`
 
 export default function Hamburger() {
   return (
-    <StyledMenuIcon>
+    <StyledHamburger>
       <input className="menuIconCheckbox" type="checkbox" />
       <div>
         <span />
         <span />
       </div>
-    </StyledMenuIcon>
+    </StyledHamburger>
   );
 }

@@ -1,9 +1,6 @@
-// for emotion
-/** @jsxImportSource @emotion/react */
+import { createGlobalStyle } from 'styled-components';
 
-import { css } from '@emotion/react';
-
-const reset = css`
+const Global = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 16px;
@@ -29,4 +26,4 @@ const reset = css`
 }
 `;
 
-export default reset;
+export default Global;

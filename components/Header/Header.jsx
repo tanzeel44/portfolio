@@ -1,10 +1,11 @@
+import Navbar from './Navbar';
 import Hamburger from './Hamburger';
-import ResumeButton from './ResumeButton';
 
 export default function Header() {
   return (
     <header>
       <Hamburger />
+      <Navbar />
     </header>
   );
 }

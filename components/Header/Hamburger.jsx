@@ -6,6 +6,7 @@ const StyledHamburger = styled.div`
   height: 50px;
   cursor: pointer;
   transform: scale(1.5);
+  z-index: 10;
 
   .menuIconCheckbox {
     display: block;

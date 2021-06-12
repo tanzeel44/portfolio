@@ -84,10 +84,10 @@ const StyledHamburger = styled.div`
   }
 `;
 
-export default function Hamburger() {
+export default function Hamburger({ openHandler, openState }) {
   return (
     <StyledHamburger>
-      <input className="menuIconCheckbox" type="checkbox" />
+      <input onChange={() => openHandler(!openState)} className="menuIconCheckbox" type="checkbox" />
       <div>
         <span />
         <span />

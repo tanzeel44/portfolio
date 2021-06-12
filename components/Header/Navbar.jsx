@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import NavMenu from './NavMenu';
 import ResumeButton from './ResumeButton';
 
-const StyledNav = styled.nav`
+const StyledNav = styled.div`
   border: 1px solid green;
 `;
 

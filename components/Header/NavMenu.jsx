@@ -5,7 +5,7 @@ const StyledMenu = styled.ul`
   font-size: 1.25em;
   
   li {
-    margin: 1em;
+    margin-bottom: 20px;
     a, a:focus, a:visited {
       text-transform: uppercase;
       text-decoration: none;
@@ -32,10 +32,6 @@ const StyledMenu = styled.ul`
       width: 100%; 
       left: 0; 
     }
-  }
-  
-  li:first-of-type {
-    margin-top: 4em;
   }
 `;
 

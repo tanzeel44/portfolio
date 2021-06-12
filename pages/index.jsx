@@ -1,16 +1,20 @@
 import Head from 'next/head';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import Global from '../styles/Global';
 import theme from '../styles/theme';
 
 import Header from '../components/Header/Header';
 
+const Container = styled.div`
+  width: 100vw;
+`;
+
 export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <div>
+        <Container>
           <Global />
           <Head>
             <title>Tanzeel</title>
@@ -20,7 +24,7 @@ export default function Home() {
           <main>
             <Header />
           </main>
-        </div>
+        </Container>
       </>
     </ThemeProvider>
   );

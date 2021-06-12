@@ -6,13 +6,13 @@ import ResumeButton from './ResumeButton';
 const StyledNav = styled.div`
   border: 1px solid #b6f;
   width: 100vw;
+  z-index: 2;
   text-align: center;
   padding: 2em;
   position: absolute;
-  left:0;
-  top: calc(4em + 1px);
-  z-index: -1;
-  display: ${(props) => (props.open ? 'block' : 'none')};
+  left: ${(props) => (props.open ? '0' : '-100%')};
+  top: calc(4em);
+  transition: left 0.5s linear;
 `;
 
 export default function Navbar({ open }) {

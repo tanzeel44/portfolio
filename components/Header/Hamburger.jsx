@@ -69,19 +69,6 @@ const StyledHamburger = styled.div`
   &:hover .menuIconCheckbox:checked + div span:last-of-type {
     width: 22px;
   }
-
-  &:hover {
-    // no need hover effect on mobile.
-    @media (min-width: 1024px) {
-      span:first-of-type {
-        width: 26px;
-      }
-
-      span:last-of-type {
-        width: 12px;
-      }
-    }
-  }
 `;
 
 export default function Hamburger({ openHandler, openState }) {

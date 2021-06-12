@@ -7,8 +7,9 @@ import Hamburger from './Hamburger';
 const StyledHeader = styled.header`
   width: 100%;
   height: 4em;
+  padding: 1em 2em;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid black;
   a, a:before,

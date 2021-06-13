@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useState, useEffect } from 'react';
 
 import NavMenu from './NavMenu';
 import ResumeButton from './ResumeButton';
@@ -12,6 +13,10 @@ const StyledNav = styled.div`
   left: ${(props) => (props.open ? '0' : '-100%')};
   top: calc(4em);
   transition: left 0.5s linear;
+
+  &.pause {
+    transition: none !important;
+  }
   
   @media only screen and (min-width: 902px) {
     position: relative;
@@ -24,13 +29,29 @@ const StyledNav = styled.div`
     align-items: center;
     height: 50%;
     padding: 0;
-    transition: 0s;
+    transition: none;
   }
 `;
 
 export default function Navbar({ open }) {
+  // control when menu animations are on and when they aren't
+  const [animationOff, setAnimationOff] = useState(true);
+
+  // pause menu transition during viewport resizing
+  useEffect(() => {
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      setAnimationOff(true);
+      clearTimeout(resizeTimer);
+
+      resizeTimer = setTimeout(() => {
+        setAnimationOff(false);
+      }, 400);
+    });
+  }, []);
+
   return (
-    <StyledNav open={open}>
+    <StyledNav className={animationOff ? 'pause' : ''} open={open}>
       <NavMenu />
       <ResumeButton />
     </StyledNav>

@@ -33,15 +33,16 @@ const StyledNav = styled.div`
   }
 `;
 
-export default function Navbar({ open }) {
+export default function Navbar({ open, setNavOpen }) {
   // control when menu animations are on and when they aren't
   const [animationOff, setAnimationOff] = useState(true);
 
-  // pause menu transition during viewport resizing
+  // pause menu transition and close menu during viewport resizing
   useEffect(() => {
     let resizeTimer;
     window.addEventListener('resize', () => {
       setAnimationOff(true);
+      setNavOpen(false);
       clearTimeout(resizeTimer);
 
       resizeTimer = setTimeout(() => {

@@ -27,7 +27,7 @@ export default function Header() {
     <StyledHeader>
       <h1><a href="/">{'<tanzeel />'}</a></h1>
       <nav>
-        <Navbar open={navOpen} />
+        <Navbar setNavOpen={setNavOpen} open={navOpen} />
         <Hamburger openHandler={setNavOpen} openState={navOpen} />
       </nav>
     </StyledHeader>

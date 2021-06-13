@@ -8,8 +8,8 @@ const StyledButton = styled.button`
   cursor: pointer;
   outline: none;
   font-size: 1.125em;
-  margin: 1em 0.8em;
-  color: #004bad;
+  margin: 1em 0;
+  color: #000;
 
   &:before,
   &:after {
@@ -18,7 +18,7 @@ const StyledButton = styled.button`
     position: absolute;
     width: 20%;
     height: 20%;
-    border: 2px solid #004bad;
+    border: 2px solid #000;
     transition: all 0.6s ease;
     border-radius: 2px;
   }
@@ -28,8 +28,8 @@ const StyledButton = styled.button`
     right: 0;
     border-top-color: transparent;
     border-left-color: transparent;
-    border-bottom-color: #004bad;
-    border-right-color: #004bad;
+    border-bottom-color: #000;
+    border-right-color: #000;
   }
 
   &:before {
@@ -37,18 +37,22 @@ const StyledButton = styled.button`
     left: 0;
     border-bottom-color: transparent;
     border-right-color: transparent;
-    border-top-color: #004bad;
-    border-left-color: #004bad;
+    border-top-color: #000;
+    border-left-color: #000;
   }
 
   &:hover:before,
   &:hover:after {
-    border-bottom-color: #004bad;
-    border-right-color: #004bad;
-    border-top-color: #004bad;
-    border-left-color: #004bad;
+    border-bottom-color: #000;
+    border-right-color: #000;
+    border-top-color: #000;
+    border-left-color: #000;
     width: 100%;
     height: 100%;
+  }
+
+  @media only screen and (min-width: 902px) {
+    margin: 0 0 0 1.5em;
   }
 `;
 

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const StyledMenu = styled.ul`
   font-weight: 700;
   font-size: 1.25em;
+  padding: 1em;
   
   li {
     margin-bottom: 20px;
@@ -31,6 +32,12 @@ const StyledMenu = styled.ul`
     a:hover:after {
       width: 100%; 
       left: 0; 
+    }
+
+    @media only screen and (min-width: 902px) {
+      display: inline-block;
+      margin: 0 1em;
+      font-size: 0.5em;
     }
   }
 `;

@@ -83,6 +83,13 @@ const StyledHamburger = styled.div`
   &.active .cross span:last-child {
     transform: translateY(-50%) rotate(-45deg) scaleX(1);
   }
+
+  @media only screen and (min-width: 902px) {
+    &, 
+    & * {
+      display: none;
+    }
+  }
 `;
 
 export default function Hamburger({ openHandler, openState }) {

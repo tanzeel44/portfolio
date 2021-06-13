@@ -6,7 +6,7 @@ import Hamburger from './Hamburger';
 
 const StyledHeader = styled.header`
   width: 100%;
-  height: 4em;
+  height: 6.25em;
   padding: 1em 2em;
   display: flex;
   justify-content: space-between;

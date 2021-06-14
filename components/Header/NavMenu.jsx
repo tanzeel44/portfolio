@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledMenu = styled.ul`
   font-weight: 700;
-  font-size: 1.25em;
+  font-size: 1.1em;
   padding: 1em;
   
   li {
@@ -24,7 +24,7 @@ const StyledMenu = styled.ul`
       height: 2px;
       left: 50%;
       position: absolute;
-      background: #000;
+      background: ${(props) => props.theme.color};
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
     }

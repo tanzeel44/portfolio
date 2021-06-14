@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 import NavMenu from './NavMenu';
 import ResumeButton from './ResumeButton';
@@ -33,7 +34,18 @@ const StyledNav = styled.div`
   }
 `;
 
-export default function Navbar({ open, setNavOpen }) {
+const DarkModeButton = styled.button`
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  @media only screen and (min-width: 902px) {
+    margin: 0 2em;
+  }
+`;
+export default function Navbar({
+  open, setNavOpen, darkMode, toggleDarkMode,
+}) {
   // control when menu animations are on and when they aren't
   const [animationOff, setAnimationOff] = useState(true);
 
@@ -55,6 +67,16 @@ export default function Navbar({ open, setNavOpen }) {
     <StyledNav className={animationOff ? 'pause' : ''} open={open}>
       <NavMenu />
       <ResumeButton />
+      <DarkModeButton type="button" onClick={() => toggleDarkMode(!darkMode)}>
+        <Image
+          className="darkModeIcon"
+          src={darkMode ? '/moon.png' : '/sun.png'}
+          alt="night mode"
+          width="48"
+          height="48"
+        />
+      </DarkModeButton>
+
     </StyledNav>
   );
 }

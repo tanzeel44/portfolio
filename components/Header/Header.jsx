@@ -11,7 +11,8 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
+  box-shadow: 0 1px rgba(0,0,0,0.2);
+
   a, a:before,
   a:after, a:visited {
     text-decoration: none;
@@ -21,13 +22,18 @@ const StyledHeader = styled.header`
   }
 `;
 
-export default function Header() {
+export default function Header({ darkMode, toggleDarkMode }) {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <StyledHeader>
       <h1><a href="/">{'<tanzeel />'}</a></h1>
       <nav>
-        <Navbar setNavOpen={setNavOpen} open={navOpen} />
+        <Navbar
+          darkMode={darkMode}
+          toggleDarkMode={toggleDarkMode}
+          setNavOpen={setNavOpen}
+          open={navOpen}
+        />
         <Hamburger openHandler={setNavOpen} openState={navOpen} />
       </nav>
     </StyledHeader>

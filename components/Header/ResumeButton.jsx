@@ -1,65 +1,52 @@
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+const Button = styled.button`
   position: relative;
-  padding: 1em 1.5em;
+  background-color: #ff2e63;
   border: none;
-  background-color: transparent;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
   cursor: pointer;
-  outline: none;
-  font-size: 1.125em;
-  margin: 1em 0;
-  color: #000;
+  font-family: inherit;
+  font-weight: 900;
+  color: ${(props) => props.theme.resumeButtonText};
 
-  &:before,
+  &:hover {
+    background:#eaeaea;
+    box-shadow:0px 2px 10px 5px #97B1BF;
+    color:#252a34;
+  }
+
   &:after {
-    content: '';
+    content: "";
+    background: #ff2e63;
     display: block;
     position: absolute;
-    width: 20%;
-    height: 20%;
-    border: 2px solid #000;
-    transition: all 0.6s ease;
-    border-radius: 2px;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
   }
 
-  &:after {
-    bottom: 0;
-    right: 0;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-bottom-color: #000;
-    border-right-color: #000;
-  }
-
-  &:before {
-    top: 0;
-    left: 0;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-    border-top-color: #000;
-    border-left-color: #000;
-  }
-
-  &:hover:before,
-  &:hover:after {
-    border-bottom-color: #000;
-    border-right-color: #000;
-    border-top-color: #000;
-    border-left-color: #000;
-    width: 100%;
-    height: 100%;
-  }
-
-  @media only screen and (min-width: 902px) {
-    margin: 0 0 0 1.5em;
+  &:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
   }
 `;
 
 export default function ResumeButton() {
   return (
-    <StyledButton>
+    <Button>
       RESUME
-    </StyledButton>
+    </Button>
   );
 }

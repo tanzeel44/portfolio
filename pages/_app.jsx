@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 import '../styles/Fonts.css';
 import theme from '../styles/theme';
+import Header from '../components/Header/Header';
 
 function MyApp({ Component, pageProps }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,9 +26,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={darkMode ? theme.dark : theme.light}>
+      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <Component
         darkMode={darkMode}
-        setDarkMode={setDarkMode}
         {...pageProps}
       />
     </ThemeProvider>

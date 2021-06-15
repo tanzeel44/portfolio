@@ -23,9 +23,7 @@ export default function Home({ darkMode, setDarkMode }) {
         <meta name="description" content="Tanzeel ur Rehman's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Header darkMode={darkMode} toggleDarkMode={setDarkMode} />
-      </main>
+      <main />
     </Container>
   );
 }

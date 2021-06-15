@@ -68,9 +68,10 @@ export default function Navbar({
     let resizeTimer;
     window.addEventListener('resize', () => {
       setAnimationOff(true);
-      setNavOpen(false);
       clearTimeout(resizeTimer);
-
+      if (window.innerWidth > 902) {
+        setNavOpen(false);
+      }
       resizeTimer = setTimeout(() => {
         setAnimationOff(false);
       }, 400);

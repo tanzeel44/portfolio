@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import Image from 'next/image';
 
 import Navbar from './Navbar';
 import Hamburger from './Hamburger';
@@ -26,7 +27,13 @@ export default function Header({ darkMode, toggleDarkMode }) {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <StyledHeader>
-      <h1><a href="/">{'<tanzeel />'}</a></h1>
+      {/* <h1><a href="/">{'<tanzeel />'}</a></h1> */}
+      <Image
+        src={darkMode ? '/logo_night.png' : '/logo_day.png'}
+        height={72}
+        width={102}
+        alt="Tanzeel"
+      />
       <nav>
         <Navbar
           darkMode={darkMode}

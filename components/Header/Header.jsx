@@ -31,8 +31,8 @@ export default function Header({ darkMode, toggleDarkMode }) {
       {/* <h1><a href="/">{'<tanzeel />'}</a></h1> */}
       <Image
         src={darkMode ? '/logo_night.png' : '/logo_day.png'}
-        height={72}
-        width={102}
+        height={64}
+        width={90}
         alt="Tanzeel"
       />
       <nav>

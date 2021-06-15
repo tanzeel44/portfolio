@@ -26,9 +26,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={darkMode ? theme.dark : theme.light}>
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <Component
         darkMode={darkMode}
+        toggleDarkMode={setDarkMode}
         {...pageProps}
       />
     </ThemeProvider>

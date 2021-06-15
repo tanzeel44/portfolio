@@ -1,9 +1,6 @@
 import Head from 'next/head';
 import styled, { ThemeProvider } from 'styled-components';
-import { useState } from 'react';
-
 import Global from '../styles/Global';
-import theme from '../styles/theme';
 
 import Header from '../components/Header/Header';
 
@@ -14,7 +11,7 @@ const Container = styled.div`
   color: ${(props) => props.theme.color};
 `;
 
-export default function Home({ darkMode, setDarkMode }) {
+export default function Home({ darkMode, toggleDarkMode }) {
   return (
     <Container>
       <Global />
@@ -23,7 +20,9 @@ export default function Home({ darkMode, setDarkMode }) {
         <meta name="description" content="Tanzeel ur Rehman's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main />
+      <main>
+        <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      </main>
     </Container>
   );
 }

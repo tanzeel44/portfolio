@@ -10,12 +10,12 @@ const StyledNav = styled.div`
   height: calc(100vh - 6.25em);
   z-index: 2;
   text-align: center;
-  padding: 3em 3em 20em 3em;
   position: absolute;
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  padding: 3em 0 5em 0;
   left: ${(props) => (props.open ? '0' : '-200%')};
   top: 6.25em;
   background-color: inherit;
@@ -25,8 +25,6 @@ const StyledNav = styled.div`
   &.pause {
     transition: none !important;
   }
-
-
   
   @media only screen and (min-width: 902px) {
     position: relative;
@@ -52,9 +50,10 @@ const DarkModeButton = styled.button`
   outline: none;
   cursor: pointer;
   background: transparent;
+  margin-top: 2em;
 
   @media only screen and (min-width: 902px) {
-    margin-left: 2em;
+    margin: 0 0 0 2em;
   }
 `;
 export default function Navbar({

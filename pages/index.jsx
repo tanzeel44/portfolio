@@ -14,23 +14,18 @@ const Container = styled.div`
   color: ${(props) => props.theme.color};
 `;
 
-export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+export default function Home({ darkMode, setDarkMode }) {
   return (
-    <ThemeProvider theme={darkMode ? theme.dark : theme.light}>
-      <>
-        <Container>
-          <Global />
-          <Head>
-            <title>Tanzeel</title>
-            <meta name="description" content="Tanzeel ur Rehman's Portfolio" />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
-          <main>
-            <Header darkMode={darkMode} toggleDarkMode={setDarkMode} />
-          </main>
-        </Container>
-      </>
-    </ThemeProvider>
+    <Container>
+      <Global />
+      <Head>
+        <title>Tanzeel</title>
+        <meta name="description" content="Tanzeel ur Rehman's Portfolio" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main>
+        <Header darkMode={darkMode} toggleDarkMode={setDarkMode} />
+      </main>
+    </Container>
   );
 }

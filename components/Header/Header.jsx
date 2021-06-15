@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 import Navbar from './Navbar';
@@ -8,12 +8,13 @@ import Hamburger from './Hamburger';
 const StyledHeader = styled.header`
   width: 100%;
   height: 6.25em;
-  padding: 1em 2em;
+  padding: 1em 4em;
   display: flex;
   justify-content: space-between;
+  font-size: 0.9em;
   align-items: center;
   box-shadow: 0 1px rgba(0,0,0,0.2);
-
+  
   a, a:before,
   a:after, a:visited {
     text-decoration: none;

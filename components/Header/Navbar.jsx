@@ -7,16 +7,26 @@ import ResumeButton from './ResumeButton';
 
 const StyledNav = styled.div`
   width: 100vw;
+  height: calc(100vh - 6.25em);
   z-index: 2;
   text-align: center;
-  padding: 2em;
+  padding: 3em;
   position: absolute;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   left: ${(props) => (props.open ? '0' : '-100%')};
-  top: calc(4em);
+  top: 6.25em;
+  background-color: inherit;
   transition: left 0.5s linear;
+  background-color: ${(props) => props.theme.background};
 
   &.pause {
     transition: none !important;
+  }
+
+  & > * {
+    margin-bottom: 3em;
   }
   
   @media only screen and (min-width: 902px) {
@@ -26,11 +36,15 @@ const StyledNav = styled.div`
     width: 100%;
     height: 100%;
     margin: 0;
-    display: flex;
+    flex-flow: row;
     align-items: center;
     height: 50%;
     padding: 0;
     transition: none;
+
+    & > * {
+      margin: 0;
+    }
   }
 `;
 
@@ -39,8 +53,13 @@ const DarkModeButton = styled.button`
   outline: none;
   cursor: pointer;
   background: transparent;
+  
+  &.pause {
+    transition: none !important;
+  }
+  
   @media only screen and (min-width: 902px) {
-    margin: 0 2em;
+    margin-left: 2em;
   }
 `;
 export default function Navbar({
@@ -67,7 +86,11 @@ export default function Navbar({
     <StyledNav className={animationOff ? 'pause' : ''} open={open}>
       <NavMenu />
       <ResumeButton />
-      <DarkModeButton type="button" onClick={() => toggleDarkMode(!darkMode)}>
+      <DarkModeButton
+        className={animationOff ? 'pause' : ''}
+        type="button"
+        onClick={() => toggleDarkMode(!darkMode)}
+      >
         <Image
           className="darkModeIcon"
           src={darkMode ? '/moon.png' : '/sun.png'}

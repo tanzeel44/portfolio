@@ -9,6 +9,7 @@ import Header from '../components/Header/Header';
 
 const Container = styled.div`
   width: 100vw;
+  min-width: 375px;
   background-color: ${(props) => props.theme.background};
   color: ${(props) => props.theme.color};
 `;

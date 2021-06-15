@@ -10,12 +10,13 @@ const StyledNav = styled.div`
   height: calc(100vh - 6.25em);
   z-index: 2;
   text-align: center;
-  padding: 3em;
+  padding: 3em 3em 20em 3em;
   position: absolute;
   display: flex;
   flex-flow: column;
   align-items: center;
-  left: ${(props) => (props.open ? '0' : '-100%')};
+  justify-content: space-between;
+  left: ${(props) => (props.open ? '0' : '-200%')};
   top: 6.25em;
   background-color: inherit;
   transition: left 0.5s linear;
@@ -25,9 +26,7 @@ const StyledNav = styled.div`
     transition: none !important;
   }
 
-  & > * {
-    margin-bottom: 3em;
-  }
+
   
   @media only screen and (min-width: 902px) {
     position: relative;
@@ -53,11 +52,7 @@ const DarkModeButton = styled.button`
   outline: none;
   cursor: pointer;
   background: transparent;
-  
-  &.pause {
-    transition: none !important;
-  }
-  
+
   @media only screen and (min-width: 902px) {
     margin-left: 2em;
   }
@@ -87,7 +82,6 @@ export default function Navbar({
       <NavMenu />
       <ResumeButton />
       <DarkModeButton
-        className={animationOff ? 'pause' : ''}
         type="button"
         onClick={() => toggleDarkMode(!darkMode)}
       >
@@ -99,7 +93,6 @@ export default function Navbar({
           height="48"
         />
       </DarkModeButton>
-
     </StyledNav>
   );
 }

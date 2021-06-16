@@ -11,6 +11,8 @@ import Layout from '../components/Layout/Layout';
 function MyApp({ Component, pageProps }) {
   const [darkMode, setDarkMode] = useState(false);
 
+  // get stored value of dark mode preference from local storage if it exists,
+  // initialize to false if not
   useEffect(() => {
     const userStorage = window.localStorage;
     if (!userStorage.dark) {
@@ -20,6 +22,7 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
+  // change value of dark mode preference in local storage to match user preference
   useEffect(() => {
     window.localStorage.setItem('dark', darkMode);
   }, [darkMode]);
@@ -27,11 +30,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={darkMode ? theme.dark : theme.light}>
       <Layout darkMode={darkMode} toggleDarkMode={setDarkMode}>
-        <Component
-          darkMode={darkMode}
-          toggleDarkMode={setDarkMode}
-          {...pageProps}
-        />
+        <Component {...pageProps} />
       </Layout>
     </ThemeProvider>
   );

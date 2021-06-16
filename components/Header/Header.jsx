@@ -15,6 +15,7 @@ const StyledHeader = styled.header`
   font-size: 0.9em;
   align-items: center;
   background-color: inherit;
+  color: inherit;
   box-shadow: 0 1px rgba(0,0,0,0.2);
   
   a, a:before,

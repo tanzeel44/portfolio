@@ -1,8 +1,7 @@
 import Head from 'next/head';
-import styled, { ThemeProvider } from 'styled-components';
-import Global from '../styles/Global';
+import styled from 'styled-components';
 
-import Header from '../components/Header/Header';
+import Global from '../styles/Global';
 
 const Container = styled.div`
   width: 100vw;
@@ -11,7 +10,7 @@ const Container = styled.div`
   color: ${(props) => props.theme.color};
 `;
 
-export default function Home({ darkMode, toggleDarkMode }) {
+export default function Home() {
   return (
     <Container>
       <Global />

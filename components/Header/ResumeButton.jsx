@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Button = styled.button`
   position: relative;
+  text-transform: uppercase;
   background-color: #ff2e63;
   border: none;
   padding: 20px;
@@ -46,7 +47,7 @@ const Button = styled.button`
 export default function ResumeButton() {
   return (
     <Button>
-      RESUME
+      résumé
     </Button>
   );
 }

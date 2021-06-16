@@ -6,8 +6,7 @@ import Navbar from './Navbar';
 import Hamburger from './Hamburger';
 
 const StyledHeader = styled.header`
-  width: 100vw;
-  min-width: 280px;
+  width: 100%;
   height: 6.25em;
   padding: 1em 4em;
   display: flex;

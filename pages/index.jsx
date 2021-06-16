@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import Global from '../styles/Global';
 
 const Container = styled.div`
-  width: 100vw;
-  min-width: 280px;
+  width: 100%;
   background-color: ${(props) => props.theme.background};
   color: ${(props) => props.theme.color};
 `;

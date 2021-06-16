@@ -15,6 +15,7 @@ export default function Layout({ children, darkMode, toggleDarkMode }) {
 
   // get live value for viewport height to avoid issues using vh units on mobile
   useEffect(() => {
+    setViewportHeight(window.innerHeight);
     window.addEventListener('resize', () => {
       setViewportHeight(window.innerHeight * 0.01);
     });

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 import Header from '../Header/Header';
 import Global from '../../styles/Global';
@@ -24,6 +25,9 @@ export default function Layout({ children, darkMode, toggleDarkMode }) {
 
   return (
     <>
+      <Head>
+        <title>About Me</title>
+      </Head>
       <Global />
       <Page style={{
         height: 100 * viewportHeight,
@@ -31,7 +35,7 @@ export default function Layout({ children, darkMode, toggleDarkMode }) {
       >
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <div style={{
-          height: 'calc(100% - 5.7rem)',
+          height: 'calc(100% - 90px)',
         }}
         >
           {children}

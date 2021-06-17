@@ -27,7 +27,13 @@ export default function Layout({ children, darkMode, toggleDarkMode }) {
     }}
     >
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      {children}
+      <div style={{
+        height: 'calc(100% - 5.7rem)',
+      }}
+      >
+        {children}
+      </div>
+
     </Page>
   );
 }

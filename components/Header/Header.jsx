@@ -30,13 +30,26 @@ export default function Header({ darkMode, toggleDarkMode }) {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <StyledHeader>
-      {/* <h1><a href="/">{'<tanzeel />'}</a></h1> */}
-      <Image
-        src={darkMode ? '/logo_night.png' : '/logo_day.png'}
-        height={64}
-        width={90}
-        alt="Tanzeel"
-      />
+      {darkMode
+        ? (
+          <Image
+            src="/logo_night.png"
+            height={64}
+            width={90}
+            alt="Tanzeel"
+            loading="eager"
+          />
+        )
+        : (
+          <Image
+            src="/logo_day.png"
+            height={64}
+            width={90}
+            alt="Tanzeel"
+            loading="eager"
+          />
+        )}
+
       <nav>
         <Navbar
           darkMode={darkMode}

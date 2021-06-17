@@ -85,13 +85,25 @@ export default function Navbar({
         type="button"
         onClick={() => toggleDarkMode(!darkMode)}
       >
-        <Image
-          className="darkModeIcon"
-          src={darkMode ? '/moon.png' : '/sun.png'}
-          alt="night mode"
-          width="48"
-          height="48"
-        />
+        {darkMode
+          ? (
+            <Image
+              src="/moon.png"
+              height={48}
+              width={48}
+              alt="switch to day mode"
+              loading="eager"
+            />
+          )
+          : (
+            <Image
+              src="/sun.png"
+              height={48}
+              width={48}
+              alt="switch to night mode"
+              loading="eager"
+            />
+          )}
       </DarkModeButton>
     </StyledNav>
   );

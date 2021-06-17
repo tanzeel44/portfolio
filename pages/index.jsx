@@ -13,7 +13,6 @@ const Container = styled.div`
   justify-content: center;
 
   div.grid-cell:nth-of-type(1) {
-    background-color: #babaff;
     width: 100%;
     height: 100%;
   }
@@ -24,6 +23,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-row: 1; 
 
     div {
       flex: 1;
@@ -36,9 +36,12 @@ const Container = styled.div`
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;    
 
-    div.grid-cell:nth-of-type(2) > div {
-      width: 100%;
-      height: auto;
+    div.grid-cell:nth-of-type(2) {
+      grid-column: 2;
+      div {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 

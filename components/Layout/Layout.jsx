@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 
 import Header from '../Header/Header';
+import Global from '../../styles/Global';
 
 const Page = styled.div`
   width: 100vw;
@@ -22,18 +23,20 @@ export default function Layout({ children, darkMode, toggleDarkMode }) {
   }, []);
 
   return (
-    <Page style={{
-      height: 100 * viewportHeight,
-    }}
-    >
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <div style={{
-        height: 'calc(100% - 5.7rem)',
+    <>
+      <Global />
+      <Page style={{
+        height: 100 * viewportHeight,
       }}
       >
-        {children}
-      </div>
-
-    </Page>
+        <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <div style={{
+          height: 'calc(100% - 5.7rem)',
+        }}
+        >
+          {children}
+        </div>
+      </Page>
+    </>
   );
 }

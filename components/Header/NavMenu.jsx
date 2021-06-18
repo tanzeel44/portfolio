@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 const StyledMenu = styled.ul`
-  font-weight: 700;
-  padding: 1em;
+  padding: 1em;  
   
   li {
     margin-bottom: 20px;

@@ -13,8 +13,8 @@ const Button = styled.button`
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
-  font-family: inherit;
-  font-weight: 900;
+  font: inherit;
+  font-size: 16px;
   color: ${(props) => props.theme.resumeButtonText};
 
   &:hover {

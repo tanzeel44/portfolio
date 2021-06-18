@@ -18,7 +18,6 @@ const Global = createGlobalStyle`
     padding: 0;
     border: 0;
     font-size: 100%;
-    font-family: 'Red Hat Display', sans-serif;
     vertical-align: baseline;
   }
 

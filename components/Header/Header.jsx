@@ -9,6 +9,8 @@ const StyledHeader = styled.header`
   width: 100%;
   height: 6.25em;
   padding: 1em 4em;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 900;
   display: flex;
   justify-content: space-between;
   font-size: 0.9em;

@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import { Player } from '@lottiefiles/react-lottie-player';
+
+import Intro from '../components/Home/Intro';
 
 const Container = styled.div`
   width: 100%;    
@@ -11,10 +13,17 @@ const Container = styled.div`
   grid-template-columns: 100%;
   grid-template-rows: 50% 50%;
   justify-content: center;
+  font-family: 'Red Hat Text', sans-serif;
 
   div.grid-cell:nth-of-type(1) {
     width: 100%;
     height: 100%;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
 
   div.grid-cell:nth-of-type(2) {
@@ -23,7 +32,6 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-row: 1; 
 
     div {
       flex: 1;
@@ -32,16 +40,13 @@ const Container = styled.div`
     }
   }
   
-  @media only screen and (min-width: 902px) {
+  @media only screen and (min-width: 901px) {
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;    
 
-    div.grid-cell:nth-of-type(2) {
-      grid-column: 2;
-      div {
-        width: 100%;
-        height: auto;
-      }
+    div.grid-cell:nth-of-type(2) > div {
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -55,7 +60,9 @@ export default function Home() {
         <meta name="description" content="Tanzeel ur Rehman's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="grid-cell" />
+      <div className="grid-cell">
+        <Intro />
+      </div>
       <div className="grid-cell">
         <Player
           autoplay

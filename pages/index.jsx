@@ -20,10 +20,6 @@ const Container = styled.div`
     height: 100%;
     font-size: 32px;
     font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
   }
 
   div.grid-cell:nth-of-type(2) {

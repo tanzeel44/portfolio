@@ -7,15 +7,20 @@ const IntroContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 1em;
-  border: 1px solid #000;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border: 10px solid #08D9D6;
+
+  @media only screen and (min-width: 902px) {
+    align-items: flex-start;
+    justify-content: center;
+  }
 
   & .typewriter {
+    width: 100%;
+    margin: 0.5em;
     text-align: center;
-    font-size: 0.95em;
 
     @media only screen and (min-width: 190px) and (max-width: 449px) {
       font-size: 1em;
@@ -38,6 +43,7 @@ const IntroContainer = styled.div`
 export default function Intro() {
   // prevent second line from rendering simultaneously with first
   const [displaySecondLine, setDisplaySecondLine] = useState(false);
+  const [displayThirdLine, setDisplayThirdLine] = useState(false);
   return (
     <IntroContainer>
       <Typewriter
@@ -48,14 +54,23 @@ export default function Intro() {
         onComplete={() => setDisplaySecondLine(true)}
         stopBlinkinOnComplete
       />
-      <br />
       {displaySecondLine && (
       <Typewriter
         className="typewriter"
         string="I am Tanzeel"
         delay={100}
         cursor="_"
+        onComplete={() => setDisplayThirdLine(true)}
         stopBlinkinOnComplete
+      />
+      )}
+      {displayThirdLine && (
+      <Typewriter
+        className="typewriter"
+        string="Web Application Developer"
+        delay={100}
+        cursor="_"
+        onComplete={() => setDisplayThirdLine(true)}
       />
       )}
     </IntroContainer>

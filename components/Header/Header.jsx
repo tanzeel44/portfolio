@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import Navbar from './Navbar';
 import Hamburger from './Hamburger';
+import HeaderBG from './HeaderBG';
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -15,9 +16,10 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   font-size: 0.9em;
   align-items: center;
-  background-color: inherit;
+  background-color: transparent;
   color: inherit;
-  box-shadow: 0 1px rgba(0,0,0,0.2);
+  position: relative;
+  transition: color 0.8s;
   
   a, a:before,
   a:after, a:visited {
@@ -32,26 +34,14 @@ export default function Header({ darkMode, toggleDarkMode }) {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <StyledHeader>
-      {darkMode
-        ? (
-          <Image
-            src="/logo_night.png"
-            height={64}
-            width={90}
-            alt="Tanzeel"
-            loading="eager"
-          />
-        )
-        : (
-          <Image
-            src="/logo_day.png"
-            height={64}
-            width={90}
-            alt="Tanzeel"
-            loading="eager"
-          />
-        )}
-
+      <HeaderBG />
+      <Image
+        src="/logo_day.png"
+        height={64}
+        width={90}
+        alt="Tanzeel"
+        loading="eager"
+      />
       <nav>
         <Navbar
           darkMode={darkMode}

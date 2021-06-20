@@ -1,13 +1,11 @@
 const theme = {
   light: {
-    background: '#fafafa',
-    color: '#252a34',
-    resumeButtonText: '#fafafa',
+    background: '#F8F1F1',
+    color: '#19456B',
   },
   dark: {
-    background: '#252a34',
-    color: '#fafafa',
-    resumeButtonText: '#252a34',
+    background: '#19456B',
+    color: '#F8F1F1',
   },
 
 };

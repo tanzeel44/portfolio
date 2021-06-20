@@ -20,7 +20,7 @@ const StyledNav = styled.div`
   top: 6.25em;
   background-color: inherit;
   transition: left 0.5s linear;
-  background-color: ${(props) => props.theme.background};
+  background-color: transparent;
 
   &.pause {
     transition: none !important;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Button = styled.button`
   position: relative;
   text-transform: uppercase;
-  background-color: #ff2e63;
+  background-color: #19456B;
   border: none;
   padding: 20px;
   width: 200px;
@@ -15,7 +15,7 @@ const Button = styled.button`
   cursor: pointer;
   font: inherit;
   font-size: 16px;
-  color: ${(props) => props.theme.resumeButtonText};
+  color: #16C79A;
 
   &:hover {
     background:#eaeaea;
@@ -25,7 +25,7 @@ const Button = styled.button`
 
   &:after {
     content: "";
-    background: #ff2e63;
+    background: #16C79A;
     display: block;
     position: absolute;
     padding-top: 300%;

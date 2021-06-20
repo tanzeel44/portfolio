@@ -54,6 +54,8 @@ const Global = createGlobalStyle`
   *:before,
   *:after {
     box-sizing: border-box;
+    transition: color 0.8s;
+    transition: background-color 0.8s;
   }
 `;
 

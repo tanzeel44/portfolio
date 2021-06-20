@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
   font-size: 0.9em;
   align-items: center;
   background-color: transparent;
-  color: inherit;
+  color: ${(props) => props.theme.headerText};
   position: relative;
   transition: color 0.8s;
   
@@ -36,7 +36,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
     <StyledHeader>
       <HeaderBG />
       <Image
-        src="/logo_day.png"
+        src="/logo.png"
         height={64}
         width={90}
         alt="Tanzeel"

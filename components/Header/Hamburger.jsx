@@ -4,7 +4,7 @@ const StyledHamburger = styled.div`
   flex: 0 0 auto;
   width: 40px;
   height: 40px;
-  border: 1px solid ${(props) => props.theme.color};
+  border: 1px solid ${(props) => props.theme.headerText};
   cursor: pointer;
   position: relative;
   
@@ -35,7 +35,7 @@ const StyledHamburger = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: ${(props) => props.theme.color};
+    background-color: ${(props) => props.theme.headerText};
     transform: translateX(-200%);
     transition: transform ease 300ms;
   }

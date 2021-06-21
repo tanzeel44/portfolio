@@ -23,15 +23,13 @@ const Container = styled.div`
   }
 
   div.grid-cell:nth-of-type(2) {
-    width: 100%;
-    height: 100%;
+    padding-top: 60px;
     display: flex;
-    justify-content: center;
-
-    div {
-      flex: 1;
-      width: auto;
-      height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    div { 
+      width: 100%;
     }
   }
   
@@ -40,8 +38,7 @@ const Container = styled.div`
     grid-template-rows: 100%;    
 
     div.grid-cell:nth-of-type(2) > div {
-      width: 100%;
-      height: auto;
+      padding: 0;
     }
   }
 

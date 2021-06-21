@@ -8,7 +8,7 @@ import ResumeButton from './ResumeButton';
 const StyledNav = styled.div`
   width: 100vw;
   height: calc(100vh - 6.25em);
-  z-index: 2;
+  z-index: 20;
   text-align: center;
   position: absolute;
   display: flex;
@@ -18,9 +18,9 @@ const StyledNav = styled.div`
   padding: 3em 0 5em 0;
   left: ${(props) => (props.open ? '0' : '-200%')};
   top: 6.25em;
-  background-color: inherit;
-  transition: left 0.5s linear;
-  background-color: transparent;
+  background-color: ${(props) => props.theme.background};
+  color: ${(props) => props.theme.color};
+  transition: left 0.5s linear, background-color 0.5s;
 
   &.pause {
     transition: none !important;
@@ -38,6 +38,7 @@ const StyledNav = styled.div`
     height: 50%;
     padding: 0;
     transition: none;
+    background-color: transparent;
 
     & > * {
       margin: 0;

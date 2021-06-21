@@ -42,6 +42,11 @@ const Button = styled.button`
     opacity: 1;
     transition: 0s;
   }
+
+  @media only screen and (max-width: 901px) {
+    background-color: ${(props) => props.theme.resumeButtonBG};
+    color: ${(props) => props.theme.resumeButtonTextMobile};
+  }
 `;
 
 export default function ResumeButton() {

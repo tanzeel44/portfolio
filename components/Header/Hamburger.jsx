@@ -66,7 +66,7 @@ const StyledHamburger = styled.div`
     display: block;
     width: 18px;
     height: 2px;
-    background-color: ${(props) => props.theme.color};
+    background-color: ${(props) => props.theme.headerText};
     transform: translateY(50%) rotate(45deg) scaleX(0);
     transition: transform ease 200ms;
   }

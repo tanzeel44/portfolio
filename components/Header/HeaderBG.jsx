@@ -31,6 +31,11 @@ export default function HeaderBG() {
 
   return (
     <svg
+      style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+      }}
       xmlns="http://www.w3.org/2000/svg"
       viewBox={`0 0 ${viewBoxWidth} 290`}
     >

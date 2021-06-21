@@ -20,7 +20,7 @@ export default function HeaderBG() {
         setViewBoxWidth(500);
       }
       if (window.innerWidth < 440) {
-        setViewBoxWidth(300);
+        setViewBoxWidth(440);
       }
     }
 

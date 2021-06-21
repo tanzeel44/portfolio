@@ -8,6 +8,7 @@ const IntroContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Exo', sans-serif;
 
   & > * {
     margin-bottom: 1.5em;

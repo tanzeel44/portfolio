@@ -17,7 +17,7 @@ const IntroContainer = styled.div`
   }
 
   h1 {
-    margin-top: 60px;
+    margin-top: 1em;
     font-size: 0.777em;
   }
 
@@ -48,6 +48,7 @@ const IntroContainer = styled.div`
     h1 {
       margin-top: 3em;
       font-size: 1.0em;
+      margin-bottom: 1em;
     }
     font-size: 2em;
   }

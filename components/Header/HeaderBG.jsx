@@ -1,36 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export default function HeaderBG() {
-  const [viewBoxWidth, setViewBoxWidth] = useState(1440);
-
-  useEffect(() => {
-    function changeViewboxWithViewport() {
-      // eslint-disable-next-line no-console
-      console.log(window.innerWidth);
-      if (window.innerWidth >= 1275) {
-        setViewBoxWidth(1440);
-      }
-      if (window.innerWidth < 1275 && window.innerWidth >= 902) {
-        setViewBoxWidth(1050);
-      }
-      if (window.innerWidth < 902 && window.innerWidth >= 640) {
-        setViewBoxWidth(750);
-      }
-      if (window.innerWidth < 640 && window.innerWidth >= 440) {
-        setViewBoxWidth(500);
-      }
-      if (window.innerWidth < 440) {
-        setViewBoxWidth(440);
-      }
-    }
-
-    // resize blob responsively with window resize to ensure proper logo/menu positioning
-    window.addEventListener('resize', changeViewboxWithViewport);
-    changeViewboxWithViewport();
-  }, []);
-
   return (
-
     <svg
       style={{
         position: 'absolute',

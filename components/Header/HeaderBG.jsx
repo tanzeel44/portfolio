@@ -6,7 +6,7 @@ export default function HeaderBG() {
   useEffect(() => {
     function changeViewboxWithViewport() {
       // eslint-disable-next-line no-console
-      console.log(window.innerWidth);
+      alert(window.innerWidth);
       if (window.innerWidth >= 1275) {
         setViewBoxWidth(1440);
       }

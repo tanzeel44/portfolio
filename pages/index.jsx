@@ -23,7 +23,6 @@ const Container = styled.div`
   }
 
   div.grid-cell:nth-of-type(2) {
-    padding-top: 60px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -31,6 +30,7 @@ const Container = styled.div`
     div { 
       width: 100%;
     }
+
   }
   
   @media only screen and (min-width: 901px) {
@@ -38,7 +38,7 @@ const Container = styled.div`
     grid-template-rows: 100%;    
 
     div.grid-cell:nth-of-type(2) > div {
-      padding: 0;
+      padding-top: 60px;
     }
   }
 

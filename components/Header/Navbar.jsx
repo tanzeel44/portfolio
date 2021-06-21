@@ -81,7 +81,10 @@ export default function Navbar({
   return (
     <StyledNav className={animationOff ? 'pause' : ''} open={open}>
       <NavMenu />
-      <ResumeButton />
+      <ResumeButton 
+        href=""
+
+      ></ResumeButton>
       <DarkModeButton
         type="button"
         onClick={() => toggleDarkMode(!darkMode)}

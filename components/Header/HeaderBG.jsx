@@ -4,8 +4,7 @@ export default function HeaderBG() {
   const [viewBoxWidth, setViewBoxWidth] = useState(1440);
 
   useEffect(() => {
-    // resize blob responsively with window resize to ensure proper logo/menu positioning
-    window.addEventListener('resize', () => {
+    function changeViewboxWithViewport() {
       // eslint-disable-next-line no-console
       console.log(window.innerWidth);
       if (window.innerWidth >= 1275) {
@@ -23,7 +22,11 @@ export default function HeaderBG() {
       if (window.innerWidth < 440) {
         setViewBoxWidth(300);
       }
-    });
+    }
+
+    // resize blob responsively with window resize to ensure proper logo/menu positioning
+    window.addEventListener('resize', changeViewboxWithViewport);
+    changeViewboxWithViewport();
   }, []);
 
   return (

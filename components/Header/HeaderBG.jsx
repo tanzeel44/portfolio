@@ -26,7 +26,7 @@ export default function HeaderBG() {
 
     // resize blob responsively with window resize to ensure proper logo/menu positioning
     window.addEventListener('resize', changeViewboxWithViewport);
-    changeViewboxWithViewport();
+    // changeViewboxWithViewport();
   }, []);
 
   return (

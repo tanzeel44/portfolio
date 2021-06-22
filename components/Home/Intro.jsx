@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const IntroContainer = styled.div`
   width: 100%;
@@ -10,57 +11,53 @@ const IntroContainer = styled.div`
   align-items: center;
   font-family: 'Exo', sans-serif;
 
-  & > * {
-    margin-bottom: 1.5em;
-    font-size: 0.6em;
-    text-align: center;
-    width: 100%
-  }
-
-  h1 {
-    margin-top: 1em;
-    font-size: 0.777em;
-  }
-
-  @media only screen and (min-width: 375px) and (max-width: 539px) {
-    h1 {
-      font-size: 0.888em;
-    }
-    font-size: 1.2em;
-  }
-
-  @media only screen and (min-width: 540px) and (max-width: 767px) {
-    h1 {
-      margin-top: 144px;
-      font-size: 1em;
-    }
-    font-size: 1.333em;
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    h1 {
-      margin-top: 144px;
-      font-size: 1.5em;
-    }
-    font-size: 1.7em;
-  }
-
-  @media only screen and (min-width: 992px) {
-    h1 {
-      margin-top: 3em;
-      font-size: 1.0em;
-      margin-bottom: 1em;
-    }
-    font-size: 2em;
-  }
 `;
 
 export default function Intro() {
+  const firstLine = 'Hi, I\'m Tanzeel';
+  const secondLine = 'A Web Application Developer';
+  const thirdLine = 'Based in Toronto, Canada';
+
+  const sentence = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const letter = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
   return (
     <IntroContainer>
-      <h1>Hi, I'm Tanzeel</h1>
-      <h2>A Web Application Developer</h2>
-      <p>Based in Toronto, Canada</p>
+      <motion.h1
+        className="intro"
+        variants={sentence}
+        initial="hidden"
+        animate="visible"
+      >
+        {firstLine.split('').map((char, index) => (
+          <motion.span className="lineOne" key={`${char}_${index * 3}`} variants={letter}>{char}</motion.span>
+        ))}
+        <br />
+        {secondLine.split('').map((char, index) => (
+          <motion.span className="lineTwo" key={`${char}_${index * 4}`} variants={letter}>{char}</motion.span>
+        ))}
+        <br />
+        {thirdLine.split('').map((char, index) => (
+          <motion.span className="lineThree" key={`${char}_${index * 5}`} variants={letter}>{char}</motion.span>
+        ))}
+        <br />
+      </motion.h1>
     </IntroContainer>
   );
 }

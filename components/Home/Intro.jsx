@@ -12,18 +12,42 @@ const IntroContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1em;
+    padding-top: 1.25em;
+    font-size: 1.1em;
     justify-content: space-around;
+
+    @media only screen and (min-width: 360px) and (max-width: 767px) {
+      font-size: 1.5em;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      font-size: 2.5em;
+    }
+
+    @media only screen and (min-width: 992px) {
+      font-size: 3em;
+      height: calc(100% - 120px);
+      justify-content: flex-end;      
+    }
 
     h1, h2, h3 {
       text-align: center;
+      @media only screen and (min-width: 992px) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    h1 {
+      font-size: 1.75em;
     }
   }
 
   .buttonContainer {
     width: 100%;
     height: 50px;
-    border-top: none;
+    @media only screen and (min-width: 992px) {
+      height: 120px;
+    }
   }
 `;
 

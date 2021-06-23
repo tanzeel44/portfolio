@@ -18,8 +18,6 @@ const Container = styled.div`
   div.grid-cell:nth-of-type(1) {
     width: 100%;
     height: 100%;
-    font-size: 32px;
-    font-weight: 700;
   }
 
   div.grid-cell:nth-of-type(2) {

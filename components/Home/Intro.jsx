@@ -4,13 +4,27 @@ import { motion } from 'framer-motion';
 const IntroContainer = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
-  padding: 0 10px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Exo', sans-serif;
+  font-family: 'Lato', sans-serif;
+  
+  .intro {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    justify-content: space-around;
 
+    h1, h2, h3 {
+      text-align: center;
+    }
+  }
+
+  .buttonContainer {
+    width: 100%;
+    height: 50px;
+    border-top: none;
+  }
 `;
 
 export default function Intro() {
@@ -39,25 +53,32 @@ export default function Intro() {
 
   return (
     <IntroContainer>
-      <motion.h1
+      <motion.div
         className="intro"
         variants={sentence}
         initial="hidden"
         animate="visible"
       >
-        {firstLine.split('').map((char, index) => (
-          <motion.span className="lineOne" key={`${char}_${index * 3}`} variants={letter}>{char}</motion.span>
-        ))}
-        <br />
-        {secondLine.split('').map((char, index) => (
-          <motion.span className="lineTwo" key={`${char}_${index * 4}`} variants={letter}>{char}</motion.span>
-        ))}
-        <br />
-        {thirdLine.split('').map((char, index) => (
-          <motion.span className="lineThree" key={`${char}_${index * 5}`} variants={letter}>{char}</motion.span>
-        ))}
-        <br />
-      </motion.h1>
+        <h1>
+          {firstLine.split('').map((char, index) => (
+            <motion.span className="lineOne" key={`${char}_${index * 3}`} variants={letter}>{char}</motion.span>
+          ))}
+        </h1>
+        <h2>
+          {secondLine.split('').map((char, index) => (
+            <motion.span className="lineTwo" key={`${char}_${index * 4}`} variants={letter}>{char}</motion.span>
+          ))}
+        </h2>
+        <h3>
+          {thirdLine.split('').map((char, index) => (
+            <motion.span className="lineThree" key={`${char}_${index * 5}`} variants={letter}>{char}</motion.span>
+          ))}
+        </h3>
+      </motion.div>
+      <div className="buttonContainer">
+        <button />
+        <button />
+      </div>
     </IntroContainer>
   );
 }

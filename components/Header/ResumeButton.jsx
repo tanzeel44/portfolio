@@ -8,7 +8,6 @@ const Button = styled.button`
   padding: 20px;
   width: 200px;
   text-align: center;
-  -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   text-decoration: none;
   overflow: hidden;

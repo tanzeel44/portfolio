@@ -8,7 +8,7 @@ const IntroContainer = styled.div`
   
   .intro {
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,6 +22,10 @@ const IntroContainer = styled.div`
 
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       font-size: 2.5em;
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1279px) {
+
     }
 
     @media only screen and (min-width: 992px) {
@@ -44,9 +48,61 @@ const IntroContainer = styled.div`
 
   .buttonContainer {
     width: 100%;
-    height: 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media only screen and (min-width: 992px) {
       height: 120px;
+      align-items: flex-start;
+    }
+
+    a {
+      position: relative;
+      text-transform: uppercase;
+      background-color: #16C79A;
+      border: none;
+      padding: 20px;
+      width: 130px;
+      margin: 0 3px;
+      text-align: center;
+      transition-duration: 0.4s;
+      text-decoration: none;
+      overflow: hidden;
+      cursor: pointer;
+      font: inherit;
+      font-size: 16px;
+      color: #19456B;
+      font-weight: 700;
+      @media only screen and (min-width: 992px) {
+        width: 200px;
+      }
+    }
+
+    a:hover {
+      background:#eaeaea;
+      box-shadow:0px 2px 10px 5px #97B1BF;
+      color:#252a34;
+    }
+
+    a:after {
+      content: "";
+      background: #16C79A;
+      display: block;
+      position: absolute;
+      padding-top: 300%;
+      padding-left: 350%;
+      margin-left: -20px !important;
+      margin-top: -120%;
+      opacity: 0;
+      transition: all 0.8s;
+    }
+
+    a:active:after {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transition: 0s;
     }
   }
 `;
@@ -100,8 +156,8 @@ export default function Intro() {
         </h3>
       </motion.div>
       <div className="buttonContainer">
-        <button />
-        <button />
+        <a type="button" href="/tanzeel-ur-rehman-resume.pdf" target="_blank">résumé</a>
+        <a type="button" href="/" target="_blank">projects</a>
       </div>
     </IntroContainer>
   );

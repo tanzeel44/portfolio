@@ -36,6 +36,11 @@ const IntroContainer = styled.div`
 
     h1, h2, h3 {
       text-align: center;
+      
+      span:hover {
+        color: #16C79A;
+      }
+      
       @media only screen and (min-width: 992px) {
         margin-bottom: 3rem;
       }

@@ -30,7 +30,7 @@ const IntroContainer = styled.div`
 
     @media only screen and (min-width: 992px) {
       font-size: 3em;
-      height: calc(100% - 120px);
+      height: calc(100% - 180px);
       justify-content: flex-end;      
     }
 
@@ -53,12 +53,12 @@ const IntroContainer = styled.div`
 
   .buttonContainer {
     width: 100%;
-    height: 60px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
     @media only screen and (min-width: 992px) {
-      height: 120px;
+      height: 180px;
       align-items: flex-start;
     }
 

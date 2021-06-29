@@ -49,13 +49,6 @@ export default function Header({ darkMode, toggleDarkMode }) {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <StyledHeader>
-      {/* <Image
-        src="/logo.png"
-        height={64}
-        width={90}
-        alt="Tanzeel"
-        loading="eager"
-      /> */}
       <Logo>
         <span>{'{'}</span>
         Tanzeel

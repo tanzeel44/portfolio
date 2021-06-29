@@ -6,7 +6,7 @@ import Hamburger from './Hamburger';
 
 const StyledHeader = styled.header`
   width: 100%;
-  height: 6.25em;
+  height: 6.25rem;
   padding: 1em 4em;
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 900;

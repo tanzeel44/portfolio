@@ -35,7 +35,7 @@ export default function Layout({ children, darkMode, toggleDarkMode }) {
       >
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <div style={{
-          height: 'calc(100% - 90px)',
+          height: 'calc(100% - 6.25rem)',
         }}
         >
           {children}

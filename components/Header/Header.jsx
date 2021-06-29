@@ -23,7 +23,7 @@ const StyledHeader = styled.header`
   @media only screen and (min-width: 992px) {
     color: #fafafa;
   }
-  
+
   a, a:before,
   a:after, a:visited {
     text-decoration: none;
@@ -33,17 +33,34 @@ const StyledHeader = styled.header`
   }
 `;
 
+const Logo = styled.p`
+  color: #fafafa;
+  font-size: 1.75em;
+  span {
+    color: #cfcfcf;
+  }
+
+  @media only screen and (min-width: 480px) {
+    font-size: 2em;
+  }
+`;
+
 export default function Header({ darkMode, toggleDarkMode }) {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <StyledHeader>
-      <Image
+      {/* <Image
         src="/logo.png"
         height={64}
         width={90}
         alt="Tanzeel"
         loading="eager"
-      />
+      /> */}
+      <Logo>
+        <span>{'{'}</span>
+        Tanzeel
+        <span>{'}'}</span>
+      </Logo>
       <nav>
         <Navbar
           darkMode={darkMode}

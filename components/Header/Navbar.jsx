@@ -39,7 +39,8 @@ const StyledNav = styled.div`
     padding: 0;
     transition: none;
     background-color: transparent;
-
+    color: #fafafa;
+    
     & > * {
       margin: 0;
     }
@@ -81,10 +82,9 @@ export default function Navbar({
   return (
     <StyledNav className={animationOff ? 'pause' : ''} open={open}>
       <NavMenu />
-      <ResumeButton 
-        href=""
-
-      ></ResumeButton>
+      <ResumeButton
+        href="/tanzeel-ur-rehman-resume.pdf"
+      />
       <DarkModeButton
         type="button"
         onClick={() => toggleDarkMode(!darkMode)}

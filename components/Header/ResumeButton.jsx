@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Button = styled.button`
   position: relative;
   text-transform: uppercase;
-  background-color: #19456B;
+  background-color: #ffc947;
   border: none;
   padding: 20px;
   width: 200px;
@@ -14,17 +14,16 @@ const Button = styled.button`
   cursor: pointer;
   font: inherit;
   font-size: 16px;
-  color: #16C79A;
+  color: #0a1931;
 
   &:hover {
     background:#eaeaea;
     box-shadow:0px 2px 10px 5px #97B1BF;
-    color:#252a34;
   }
 
   &:after {
     content: "";
-    background: #16C79A;
+    background: #ffc947;
     display: block;
     position: absolute;
     padding-top: 300%;

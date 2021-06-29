@@ -36,6 +36,10 @@ const StyledMenu = styled.ul`
       display: inline-block;
       margin: 0 1em;
       font-size: 0.5em;
+
+      a:after {
+        background: #fafafa;
+      }
     }
   }
 `;

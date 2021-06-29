@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 import Navbar from './Navbar';
 import Hamburger from './Hamburger';
-import HeaderBG from './HeaderBG';
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -16,10 +15,14 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   font-size: 0.9em;
   align-items: center;
-  background-color: transparent;
+  background-color: #da0037;
+  box-shadow: rgba(200, 0, 0, 0.36) 0px 1px 3px, rgba(225, 0, 0, 0.72) 0px 1px 2px;
   color: ${(props) => props.theme.headerText};
   position: relative;
-  transition: color 0.8s;
+  
+  @media only screen and (min-width: 992px) {
+    color: #fafafa;
+  }
   
   a, a:before,
   a:after, a:visited {
@@ -34,7 +37,6 @@ export default function Header({ darkMode, toggleDarkMode }) {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <StyledHeader>
-      <HeaderBG />
       <Image
         src="/logo.png"
         height={64}

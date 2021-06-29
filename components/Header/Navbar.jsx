@@ -22,6 +22,14 @@ const StyledNav = styled.div`
   color: ${(props) => props.theme.color};
   transition: left 0.5s linear, background-color 0.5s;
 
+  .github-icon {
+    margin-top: 1em;
+  }
+
+  i {
+    font-size: 3rem;
+  }
+
   &.pause {
     transition: none !important;
   }
@@ -40,6 +48,11 @@ const StyledNav = styled.div`
     transition: none;
     background-color: transparent;
     color: #fafafa;
+
+    .github-icon {
+      margin-left: 0.5em;
+      margin-top: 0;
+    }
     
     & > * {
       margin: 0;
@@ -85,6 +98,9 @@ export default function Navbar({
       <ResumeButton
         href="/tanzeel-ur-rehman-resume.pdf"
       />
+      <a className="github-icon" href="https://www.github.com/dw44" target="_blank" rel="noreferrer">
+        <i className="devicon-github-original-wordmark" />
+      </a>
       <DarkModeButton
         type="button"
         onClick={() => toggleDarkMode(!darkMode)}

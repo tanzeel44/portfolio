@@ -3,6 +3,7 @@
 
 import { ThemeProvider } from 'styled-components';
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 import '../styles/Fonts.css';
 import theme from '../styles/theme';
@@ -30,6 +31,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={darkMode ? theme.dark : theme.light}>
       <Layout darkMode={darkMode} toggleDarkMode={setDarkMode}>
+        <Head>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css" />
+        </Head>
         <Component darkMode={darkMode} {...pageProps} />
       </Layout>
     </ThemeProvider>

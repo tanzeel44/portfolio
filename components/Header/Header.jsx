@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import Image from 'next/image';
 
 import Navbar from './Navbar';
 import Hamburger from './Hamburger';
@@ -35,13 +34,9 @@ const StyledHeader = styled.header`
 
 const Logo = styled.p`
   color: #fafafa;
-  font-size: 1.75em;
+  font-size: 2.2em;
   span {
     color: #cfcfcf;
-  }
-
-  @media only screen and (min-width: 480px) {
-    font-size: 2em;
   }
 `;
 
@@ -50,9 +45,9 @@ export default function Header({ darkMode, toggleDarkMode }) {
   return (
     <StyledHeader>
       <Logo>
-        <span>{'{'}</span>
-        Tanzeel
-        <span>{'}'}</span>
+        <span>{'{ '}</span>
+        T
+        <span>{' }'}</span>
       </Logo>
       <nav>
         <Navbar

@@ -65,7 +65,7 @@ const IntroContainer = styled.div`
     a {
       position: relative;
       text-transform: uppercase;
-      background-color: #16C79A;
+      background-color: #ffc947;
       border: none;
       padding: 20px;
       width: 130px;
@@ -77,7 +77,7 @@ const IntroContainer = styled.div`
       cursor: pointer;
       font: inherit;
       font-size: 16px;
-      color: #19456B;
+      color: #0a1931;
       font-weight: 700;
       @media only screen and (min-width: 992px) {
         width: 200px;
@@ -87,12 +87,11 @@ const IntroContainer = styled.div`
     a:hover {
       background:#eaeaea;
       box-shadow:0px 2px 10px 5px #97B1BF;
-      color:#252a34;
     }
 
     a:after {
       content: "";
-      background: #16C79A;
+      background: #ffc947;
       display: block;
       position: absolute;
       padding-top: 300%;

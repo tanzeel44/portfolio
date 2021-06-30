@@ -1,3 +1,8 @@
+const fonts = {
+  headings: '\'Red Hat Text\', sans-serif',
+  text: '\'Lato\', sans-serif',
+};
+
 const theme = {
   light: {
     background: '#ededed',
@@ -5,6 +10,7 @@ const theme = {
     headerText: '#ededed',
     resumeButtonBG: '#da0037',
     resumeButtonTextMobile: '#171717',
+    fonts,
   },
   dark: {
     background: '#444444',
@@ -12,8 +18,8 @@ const theme = {
     headerText: '#ededed',
     resumeButtonBG: '#da0037',
     resumeButtonTextMobile: '#171717',
+    fonts,
   },
-
 };
 
 export default theme;

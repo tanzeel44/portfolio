@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import Link from 'next/link';
 
 import Navbar from './Navbar';
 import Hamburger from './Hamburger';
@@ -8,7 +9,7 @@ const StyledHeader = styled.header`
   width: 100%;
   height: 6.25rem;
   padding: 1em 4em;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: ${(props) => props.theme.fonts.headings};
   font-weight: 900;
   display: flex;
   justify-content: space-between;
@@ -34,7 +35,9 @@ const StyledHeader = styled.header`
 
 const Logo = styled.p`
   color: #fafafa;
-  font-size: 2.2em;
+  a {
+    font-size: 2.2em !important;  
+  }
   span {
     color: #cfcfcf;
   }
@@ -45,9 +48,13 @@ export default function Header({ darkMode, toggleDarkMode }) {
   return (
     <StyledHeader>
       <Logo>
-        <span>{'{ '}</span>
-        T
-        <span>{' }'}</span>
+        <Link href="/">
+          <a>
+            <span>{'{ '}</span>
+            T
+            <span>{' }'}</span>
+          </a>
+        </Link>
       </Logo>
       <nav>
         <Navbar

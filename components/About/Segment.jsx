@@ -7,14 +7,14 @@ const Container = styled.section`
   grid-template-columns: 100%;
   grid-template-rows: 100%;
 
-  div:nth-of-type(1) {
+  &:nth-child(1) {
     display: none;
   }
 
   @media only screen and (min-width: 992px) {
     grid-template-rows: 40% 60%;
     
-    div:nth-of-type(1) {
+    &:nth-child(1) {
       display: block;
     }
   }

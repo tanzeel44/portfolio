@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Segment from '../components/About/Segment';
+
 const AboutContainer = styled.div`
   height: 100%;
   width: 100%;
@@ -10,17 +12,13 @@ const AboutContainer = styled.div`
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;    
   }
-
-  div {
-    border: 1px solid #f16882;
-  }
 `;
 
 export default function About() {
   return (
     <AboutContainer>
-      <div />
-      <div />
+      <Segment />
+      <Segment />
     </AboutContainer>
   );
 }

@@ -13,7 +13,7 @@ const Container = styled.div`
   grid-template-columns: 100%;
   grid-template-rows: 50% 50%;
   justify-content: center;
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: ${(props) => props.theme.fonts.main};
 
   div.grid-cell:nth-of-type(1) {
     width: 100%;

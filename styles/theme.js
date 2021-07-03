@@ -1,6 +1,6 @@
 const fonts = {
   headings: '\'Red Hat Text\', sans-serif',
-  text: '\'Lato\', sans-serif',
+  main: '\'Montserrat\', sans-serif',
 };
 
 const theme = {

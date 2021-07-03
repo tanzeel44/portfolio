@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 const IntroContainer = styled.div`
   width: 100%;
   height: 100%;
-  font-family: 'Lato', sans-serif;
   
   .intro {
     width: 100%;

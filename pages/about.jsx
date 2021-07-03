@@ -17,8 +17,8 @@ const AboutContainer = styled.div`
 export default function About() {
   return (
     <AboutContainer>
-      <Segment />
-      <Segment />
+      <Segment imageName="webdev" />
+      <Segment imageName="desk" />
     </AboutContainer>
   );
 }

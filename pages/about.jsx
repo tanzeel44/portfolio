@@ -18,7 +18,7 @@ export default function About() {
   return (
     <AboutContainer>
       <Segment imageName="webdev" />
-      <Segment imageName="desk" />
+      <Segment imageName="dw" />
     </AboutContainer>
   );
 }

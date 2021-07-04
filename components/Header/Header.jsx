@@ -10,10 +10,9 @@ const StyledHeader = styled.header`
   height: 6.25rem;
   padding: 0 2rem;
   font-family: ${(props) => props.theme.fonts.navbar};
-  font-weight: 900;
   display: flex;
   justify-content: space-between;
-  font-size: 1em;
+  font-size: 1.2em;
   align-items: center;
   color: ${(props) => props.theme.headerText};
   position: relative;
@@ -21,7 +20,7 @@ const StyledHeader = styled.header`
   
   @media only screen and (min-width: 902px) {
     color: #fafafa;
-    padding: 0 5rem;
+    padding: 0 4rem;
   }
 
   a, a:before,

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledMenu = styled.ul`
   padding: 1em;  
-  
+
   li {
     margin-bottom: 20px;
     a, a:focus, a:visited {
@@ -38,7 +38,7 @@ const StyledMenu = styled.ul`
       font-size: 0.4em;
 
       a:after {
-        background: #fbfbfb;
+        background: ${(props) => props.theme.headerText};
       }
     }
   }

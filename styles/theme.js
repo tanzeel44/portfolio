@@ -8,19 +8,19 @@ const fonts = {
 
 const theme = {
   light: {
-    background: '#fbfbfb',
+    background: '#f5f5f5',
     color: '#002651',
     headerText: '#775ada',
     resumeButtonBG: '#ff304f',
-    resumeButtonTextMobile: '#fbfbfb',
+    resumeButtonTextMobile: '#f5f5f5',
     fonts,
   },
   dark: {
     background: '#002651',
-    color: '#fbfbfb',
+    color: '#f5f5f5',
     headerText: '#28c7fa',
     resumeButtonBG: '#ff304f',
-    resumeButtonTextMobile: '#fbfbfb',
+    resumeButtonTextMobile: '#f5f5f5',
     fonts,
   },
 };

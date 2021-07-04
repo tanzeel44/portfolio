@@ -7,7 +7,7 @@ import ResumeButton from './ResumeButton';
 
 const StyledNav = styled.div`
   width: 100vw;
-  height: calc(100vh - 6.25em);
+  height: calc(100vh - 6.25rem);
   z-index: 20;
   text-align: center;
   position: absolute;
@@ -15,20 +15,12 @@ const StyledNav = styled.div`
   flex-flow: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 3em 0 5em 0;
+  padding: 3rem 0 5rem 0;
   left: ${(props) => (props.open ? '0' : '-200%')};
-  top: 6.25em;
+  top: 6.25rem;
   background-color: ${(props) => props.theme.background};
-  color: ${(props) => props.theme.color};
+  color: ${(props) => props.theme.headerText};
   transition: left 0.5s linear, background-color 0.5s;
-
-  .github-icon {
-    margin-top: 1em;
-  }
-
-  i {
-    font-size: 3rem;
-  }
 
   &.pause {
     transition: none !important;
@@ -47,11 +39,6 @@ const StyledNav = styled.div`
     padding: 0;
     transition: none;
     background-color: transparent;
-
-    .github-icon {
-      margin-left: 0.5em;
-      margin-top: 0;
-    }
     
     & > * {
       margin: 0;

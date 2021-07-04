@@ -47,7 +47,6 @@ const StyledNav = styled.div`
     padding: 0;
     transition: none;
     background-color: transparent;
-    color: #fafafa;
 
     .github-icon {
       margin-left: 0.5em;
@@ -98,9 +97,6 @@ export default function Navbar({
       <ResumeButton
         href="/tanzeel-ur-rehman-resume.pdf"
       />
-      <a className="github-icon" href="https://www.github.com/dw44" target="_blank" rel="noreferrer">
-        <i className="devicon-github-original-wordmark" />
-      </a>
       <DarkModeButton
         type="button"
         onClick={() => toggleDarkMode(!darkMode)}

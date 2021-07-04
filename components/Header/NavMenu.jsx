@@ -38,7 +38,7 @@ const StyledMenu = styled.ul`
       font-size: 0.4em;
 
       a:after {
-        background: #fafafa;
+        background: #fbfbfb;
       }
     }
   }

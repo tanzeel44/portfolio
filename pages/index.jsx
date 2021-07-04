@@ -50,16 +50,8 @@ export default function Home() {
         <meta name="description" content="Tanzeel ur Rehman's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="grid-cell">
-        <Intro />
-      </div>
-      <div className="grid-cell">
-        <Player
-          autoplay
-          loop
-          src="/lottie/working.json"
-        />
-      </div>
+      <div className="grid-cell" />
+      <div className="grid-cell" />
     </Container>
   );
 }

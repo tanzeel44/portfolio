@@ -50,7 +50,7 @@ export default function Home() {
       </Head>
       <div className="grid-cell" />
       <div className="grid-cell">
-        <Image src="/home.svg" height="3000" width="3000" objectFit="responsive" />
+        <Image src="/axe.svg" height="2160" width="3000" objectFit="responsive" />
       </div>
     </Container>
   );

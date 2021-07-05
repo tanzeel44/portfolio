@@ -11,7 +11,6 @@ const StyledMenu = styled.ul`
       color: inherit;
       display: inline-block;
       position: relative;
-      padding-bottom: 3px;
     }
 
     a:after {
@@ -22,7 +21,7 @@ const StyledMenu = styled.ul`
       height: 2px;
       left: 50%;
       position: absolute;
-      background: ${(props) => props.theme.color};
+      background: ${(props) => props.theme.headerText};
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
     }

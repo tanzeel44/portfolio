@@ -3,7 +3,7 @@
 const fonts = {
   navbar: '\'Open Sans\', sans-serif',
   headings: '\'Red Hat Text\', sans-serif',
-  main: '\'Montserrat\', sans-serif',
+  main: '\'Playfair\', serif',
 };
 
 const theme = {

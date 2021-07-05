@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import { Player } from '@lottiefiles/react-lottie-player';
-
-import Intro from '../components/Home/Intro';
+import Image from 'next/image';
 
 const Container = styled.div`
   width: 100%;    
@@ -51,7 +49,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="grid-cell" />
-      <div className="grid-cell" />
+      <div className="grid-cell">
+        <Image src="/home.svg" height="3000" width="3000" objectFit="responsive" />
+      </div>
     </Container>
   );
 }

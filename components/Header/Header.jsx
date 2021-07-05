@@ -16,7 +16,6 @@ const StyledHeader = styled.header`
   align-items: center;
   color: ${(props) => props.theme.headerText};
   position: relative;
-  border-bottom: 2px solid ${(props) => props.theme.color};
   
   @media only screen and (min-width: 902px) {
     color: #fafafa;

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import Image from 'next/image';
+import Intro from '../components/Home/Intro';
 
 const Container = styled.div`
   width: 100%;    
@@ -48,9 +49,11 @@ export default function Home() {
         <meta name="description" content="Tanzeel ur Rehman's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="grid-cell" />
       <div className="grid-cell">
-        <Image src="/axe.svg" height="2160" width="3000" objectFit="responsive" />
+        <Intro />
+      </div>
+      <div className="grid-cell">
+        <Image src="/axe.svg" height="2000" width="3000" objectFit="responsive" />
       </div>
     </Container>
   );

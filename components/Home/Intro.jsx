@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
 import { SiGithub } from 'react-icons/si';
 import Button from '../Button';
 
-const IntroContainer = styled.div`
+const IntroContainer = styled(motion.div)`
   height: 100%;
   width: 100%;
   font-family: ${(props) => props.theme.fonts.main};
@@ -68,19 +70,53 @@ const IntroContainer = styled.div`
   }
 `;
 
+// framermotion variant for outer container
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 1,
+      duration: 2,
+    },
+  },
+};
+
+const headingVariants = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
 export default function Intro() {
   return (
-    <IntroContainer>
-      <h1>
+    <IntroContainer
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+    >
+      <motion.h1
+        variants={headingVariants}
+      >
         Hi,
         <br />
         {' '}
         I'm
         <span> Tanzeel</span>
-      </h1>
-      <h2>A Full Stack Web Developer</h2>
-      <h3>Based in Toronto, ON</h3>
-      <div className="link-container">
+      </motion.h1>
+      <motion.h2
+        variants={headingVariants}
+      >
+        A Full Stack Web Developer
+      </motion.h2>
+      <motion.h3
+        variants={headingVariants}
+      >
+        Based in Toronto, ON
+      </motion.h3>
+      <motion.div
+        className="link-container"
+        variants={headingVariants}
+      >
         <a
           href="/about"
           className="about-link"
@@ -98,7 +134,7 @@ export default function Intro() {
           <SiGithub size="3em" />
 
         </a>
-      </div>
+      </motion.div>
     </IntroContainer>
   );
 }

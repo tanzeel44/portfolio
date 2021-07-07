@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import Segment from '../components/About/Segment';
-
 const AboutContainer = styled.div`
   height: 100%;
   width: 100%;
@@ -16,9 +14,6 @@ const AboutContainer = styled.div`
 
 export default function About() {
   return (
-    <AboutContainer>
-      <Segment imageName="webdev" />
-      <Segment imageName="dw" />
-    </AboutContainer>
+    <AboutContainer />
   );
 }

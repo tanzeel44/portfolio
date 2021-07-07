@@ -37,6 +37,7 @@ const IntroContainer = styled.div`
 
   @media only screen and (min-width: 992px) {
     justify-content: space-evenly;
+    padding: 4rem 0;
     h1 {
       font-size: 5rem;
     }
@@ -80,12 +81,23 @@ export default function Intro() {
       <h2>A Full Stack Web Developer</h2>
       <h3>Based in Toronto, ON</h3>
       <div className="link-container">
-        <a href="/about" className="about-link">
+        <a
+          href="/about"
+          className="about-link"
+        >
           <Button>
             Learn More
           </Button>
         </a>
-        <a className="github-link" href="/"><SiGithub size="3em" /></a>
+        <a
+          className="github-link"
+          href="https://www.github.com/dw44"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <SiGithub size="3em" />
+
+        </a>
       </div>
     </IntroContainer>
   );

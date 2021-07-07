@@ -43,12 +43,4 @@ const Button = styled.button`
   }
 `;
 
-export default function ResumeButton() {
-  return (
-    <a href="/tanzeel-ur-rehman-resume.pdf" target="_blank">
-      <Button>
-        résumé
-      </Button>
-    </a>
-  );
-}
+export default Button;

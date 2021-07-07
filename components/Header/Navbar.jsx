@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 import NavMenu from './NavMenu';
-import ResumeButton from './ResumeButton';
+import Button from '../Button';
 
 const StyledNav = styled.div`
   width: 100vw;
@@ -81,9 +81,11 @@ export default function Navbar({
   return (
     <StyledNav className={animationOff ? 'pause' : ''} open={open}>
       <NavMenu />
-      <ResumeButton
-        href="/tanzeel-ur-rehman-resume.pdf"
-      />
+      <a href="/tanzeel-ur-rehman-resume.pdf" target="_blank">
+        <Button>
+          résumé
+        </Button>
+      </a>
       <DarkModeButton
         type="button"
         onClick={() => toggleDarkMode(!darkMode)}

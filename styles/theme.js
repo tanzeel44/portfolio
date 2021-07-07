@@ -3,24 +3,24 @@
 const fonts = {
   navbar: '\'Open Sans\', sans-serif',
   headings: '\'Red Hat Text\', sans-serif',
-  main: '\'Playfair\', serif',
+  main: '\'Source Code Pro\', monospace',
 };
 
 const theme = {
   light: {
-    background: '#f5f5f5',
+    background: '#fcfcfc',
     color: '#002651',
     headerText: '#775ada',
     resumeButtonBG: '#ff304f',
-    resumeButtonTextMobile: '#f5f5f5',
+    resumeButtonTextMobile: '#fcfcfc',
     fonts,
   },
   dark: {
     background: '#002651',
-    color: '#f5f5f5',
+    color: '#fcfcfc',
     headerText: '#28c7fa',
     resumeButtonBG: '#ff304f',
-    resumeButtonTextMobile: '#f5f5f5',
+    resumeButtonTextMobile: '#fcfcfc',
     fonts,
   },
 };

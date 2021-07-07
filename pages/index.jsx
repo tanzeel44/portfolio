@@ -10,7 +10,7 @@ const Container = styled.div`
   color: ${(props) => props.theme.color};
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 60% 40%;
   justify-content: center;
   font-family: ${(props) => props.theme.fonts.main};
 

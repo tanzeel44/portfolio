@@ -76,7 +76,7 @@ const containerVariants = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 1,
+      staggerChildren: 1.25,
       duration: 2,
     },
   },
@@ -100,7 +100,7 @@ export default function Intro() {
         Hi,
         <br />
         {' '}
-        I'm
+        I&apos;m
         <span> Tanzeel</span>
       </motion.h1>
       <motion.h2

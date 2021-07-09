@@ -2,26 +2,25 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+import Display from '../components/About/Display';
+
 const AboutContainer = styled(motion.div)`
-  height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 15% 85%;
+  height: 100%;
+  font: ${(props) => props.theme.fonts.main};
 
   .vector {
     display: none;
+    height: 100%;
+    width: 100%;
   }
 
   @media only screen and (min-width: 992px) {
-    grid-template-columns: 15% 50% 35%;
-    grid-template-rows: 100%;    
-    
+    display: grid;
+    grid-template-columns: 60% 40%;
+
     .vector {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: stretch;
     }
   }
 `;
@@ -29,14 +28,13 @@ const AboutContainer = styled(motion.div)`
 export default function About() {
   return (
     <AboutContainer>
-      <div style={{ backgroundColor: 'red' }} />
-      <div />
+      <Display />
       <div className="vector">
         <Image
           src="/about.svg"
           height="600"
           width="600"
-          layout="responsive"
+          layout="intrinsic"
         />
       </div>
     </AboutContainer>

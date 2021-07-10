@@ -8,6 +8,7 @@ import TechStack from './TechStack';
 const DisplayContainer = styled(motion.div)`
   height: 100%;
   width: 100%;
+  position: relative;
   font-family: ${(props) => props.theme.fonts.main};
 
   .menu {
@@ -21,24 +22,23 @@ const DisplayContainer = styled(motion.div)`
       font-family: inherit;
       font-size: 1.25rem;
       font-weight: 600;
+      cursor: pointer;
     }
-
   }
 `;
 
 export default function Display() {
   // only for mobile. both will be displayed on desktop
-  const [nowShowing, setNowShowing] = useState('about');
+  const [nowShowing, setNowShowing] = useState('tech');
 
   return (
 
     <DisplayContainer>
       <div className="menu">
-        <button type="button">About</button>
-        <button type="button">My Tech</button>
+        <button onClick={() => setNowShowing('about')} type="button">About</button>
+        <button onClick={() => setNowShowing('tech')} type="button">My Tech</button>
       </div>
-      <AboutMe />
-      <TechStack />
+      {nowShowing === 'about' ? <AboutMe /> : <TechStack />}
     </DisplayContainer>
   );
 }

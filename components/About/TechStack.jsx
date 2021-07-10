@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Tech = styled(motion.div)`
-  height: 100%;
+  height: 88%;
   width: 100%;
   background-color: purple;
-  z-index: 10;
+  @media only screen and (min-width: 992px) {
+    height: 100%;
+  }
 `;
 
 export default function TechStack() {

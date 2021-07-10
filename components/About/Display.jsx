@@ -11,6 +11,11 @@ const DisplayContainer = styled(motion.div)`
   position: relative;
   font-family: ${(props) => props.theme.fonts.main};
 
+  .mobile {
+    display: block;
+    height: 100%;
+  }
+
   .menu {
     height: 12%;
     background-color: red;
@@ -25,20 +30,39 @@ const DisplayContainer = styled(motion.div)`
       cursor: pointer;
     }
   }
+
+  @media only screen and (min-width: 992px) {
+    .mobile {
+      display: none;
+    }
+
+    .desktop {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      height: 100%;
+      width: 100%;
+      background-color: red;
+    }
+  }
 `;
 
 export default function Display() {
   // only for mobile. both will be displayed on desktop
-  const [nowShowing, setNowShowing] = useState('tech');
+  const [nowShowing, setNowShowing] = useState('about');
 
   return (
-
     <DisplayContainer>
-      <div className="menu">
-        <button onClick={() => setNowShowing('about')} type="button">About</button>
-        <button onClick={() => setNowShowing('tech')} type="button">My Tech</button>
+      <div className="mobile">
+        <div className="menu">
+          <button onClick={() => setNowShowing('about')} type="button">About</button>
+          <button onClick={() => setNowShowing('tech')} type="button">My Tech</button>
+        </div>
+        {nowShowing === 'about' ? <AboutMe /> : <TechStack />}
       </div>
-      {nowShowing === 'about' ? <AboutMe /> : <TechStack />}
+      <div className="desktop">
+        <AboutMe />
+        <TechStack />
+      </div>
     </DisplayContainer>
   );
 }

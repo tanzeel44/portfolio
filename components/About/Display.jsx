@@ -11,6 +11,10 @@ const DisplayContainer = styled(motion.div)`
   position: relative;
   font-family: ${(props) => props.theme.fonts.main};
 
+  .desktop {
+    display: none;
+  }
+  
   .mobile {
     display: block;
     height: 100%;

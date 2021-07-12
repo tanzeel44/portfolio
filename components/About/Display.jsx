@@ -22,7 +22,6 @@ const DisplayContainer = styled(motion.div)`
 
   .menu {
     height: 12%;
-    background-color: red;
     display: flex;
 
     button {
@@ -45,7 +44,6 @@ const DisplayContainer = styled(motion.div)`
       grid-template-rows: repeat(2, 1fr);
       height: 100%;
       width: 100%;
-      background-color: red;
     }
   }
 `;

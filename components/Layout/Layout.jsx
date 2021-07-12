@@ -6,7 +6,7 @@ import Header from '../Header/Header';
 import Global from '../../styles/Global';
 
 const Page = styled.div`
-  width: 100dvw;
+  width: 100vw;
   min-width: 280px;
   background-color: ${(props) => props.theme.background};
   color: ${(props) => props.theme.color};

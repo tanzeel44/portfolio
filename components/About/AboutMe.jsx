@@ -22,7 +22,6 @@ const About = styled(motion.div)`
     width: calc(100% - 4rem);
     position: absolute;
     right: 0;
-    overflow-y: auto;
     font-weight: 500;
     font-size: 1rem;
 
@@ -50,7 +49,7 @@ export default function AboutMe() {
         </p>
         <br />
         <p>
-          My journey towards becoming a software developer started by chance, when I had to automate data entry for a project I was supervising, and I ended up going down the rabbit hole that would lead me to spend the next three years learning everything I could about programming, and how to translate what I was learning into actual projects. My persistence, and ability to easily learn new concepts, has taken me from never having written a line of JavaScript, to building fully functioning web applications covering the entire technology stack, while juggling a full time career as a Senior Engineer, and an unplanned move across the world during a pandemic.
+          My journey towards becoming a software developer started by chance, when I had to automate data entry for a project I was supervising, leading me down the rabbit hole that would have me spend the next three years learning everything I could about programming, and how to translate what I was learning into actual projects. My persistence, and ability to easily learn new concepts, has taken me from never having written a line of JavaScript, to building fully functioning web applications covering the entire technology stack, while juggling a full time career as a Senior Engineer, and an unplanned move across the world during a pandemic.
         </p>
         <br />
         <p>

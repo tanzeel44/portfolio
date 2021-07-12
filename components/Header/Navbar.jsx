@@ -6,8 +6,8 @@ import NavMenu from './NavMenu';
 import Button from '../Button';
 
 const StyledNav = styled.div`
-  width: 100dvw;
-  height: calc(100dvh - 6.25rem);
+  width: 100vw;
+  height: calc(100vh - 6.25rem);
   z-index: 20;
   text-align: center;
   position: absolute;

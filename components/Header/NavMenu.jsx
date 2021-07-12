@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledMenu = styled.ul`
   padding: 1em;  
-  
+
   li {
     margin-bottom: 20px;
     a, a:focus, a:visited {
@@ -11,7 +11,6 @@ const StyledMenu = styled.ul`
       color: inherit;
       display: inline-block;
       position: relative;
-      padding-bottom: 3px;
     }
 
     a:after {
@@ -22,7 +21,7 @@ const StyledMenu = styled.ul`
       height: 2px;
       left: 50%;
       position: absolute;
-      background: ${(props) => props.theme.color};
+      background: ${(props) => props.theme.headerText};
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
     }
@@ -38,7 +37,7 @@ const StyledMenu = styled.ul`
       font-size: 0.4em;
 
       a:after {
-        background: #fafafa;
+        background: ${(props) => props.theme.headerText};
       }
     }
   }

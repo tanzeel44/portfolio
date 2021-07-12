@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import { Player } from '@lottiefiles/react-lottie-player';
-
+import Image from 'next/image';
 import Intro from '../components/Home/Intro';
 
 const Container = styled.div`
@@ -11,7 +10,7 @@ const Container = styled.div`
   color: ${(props) => props.theme.color};
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 60% 40%;
   justify-content: center;
   font-family: ${(props) => props.theme.fonts.main};
 
@@ -54,11 +53,7 @@ export default function Home() {
         <Intro />
       </div>
       <div className="grid-cell">
-        <Player
-          autoplay
-          loop
-          src="/lottie/working.json"
-        />
+        <Image src="/axe.svg" height="500" width="900" layout="responsive" />
       </div>
     </Container>
   );

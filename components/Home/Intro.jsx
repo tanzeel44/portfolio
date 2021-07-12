@@ -1,167 +1,140 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const IntroContainer = styled.div`
-  width: 100%;
+import { SiGithub } from 'react-icons/si';
+import Button from '../Button';
+
+const IntroContainer = styled(motion.div)`
   height: 100%;
-  
-  .intro {
-    width: 100%;
-    height: calc(100% - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1.25em;
-    font-size: 1.1em;
-    justify-content: space-around;
+  width: 100%;
+  font-family: ${(props) => props.theme.fonts.main};
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 0;
 
-    @media only screen and (min-width: 360px) and (max-width: 767px) {
-      font-size: 1.5em;
-    }
-
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      font-size: 2.5em;
-    }
-
-    @media only screen and (min-width: 992px) and (max-width: 1279px) {
-
-    }
-
-    @media only screen and (min-width: 992px) {
-      font-size: 3em;
-      height: calc(100% - 180px);
-      justify-content: flex-end;      
-    }
-
-    h1, h2, h3 {
-      text-align: center;
-      
-      span:hover {
-        color: #16C79A;
-      }
-      
-      @media only screen and (min-width: 992px) {
-        margin-bottom: 3rem;
-      }
-    }
-
-    h1 {
-      font-size: 1.75em;
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    span {
+      color: ${(props) => props.theme.headerText}
     }
   }
 
-  .buttonContainer {
-    width: 100%;
-    height: 90px;
+  h2, h3 {
+    font-size: 1.444rem;
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 768px and max-width: 991px) {
+    h1 {
+      font-size: 4rem
+    }
+
+    h2, h3 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    justify-content: space-evenly;
+    padding: 4rem 0;
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2, h3 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .link-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    @media only screen and (min-width: 992px) {
-      height: 180px;
-      align-items: flex-start;
-    }
+  }
 
-    a {
-      position: relative;
-      text-transform: uppercase;
-      background-color: #ffc947;
-      border: none;
-      padding: 20px;
-      width: 130px;
-      margin: 0 3px;
-      text-align: center;
-      transition-duration: 0.4s;
-      text-decoration: none;
-      overflow: hidden;
-      cursor: pointer;
-      font: inherit;
-      font-size: 16px;
-      color: #0a1931;
-      font-weight: 700;
-      @media only screen and (min-width: 992px) {
-        width: 200px;
-      }
-    }
+  a, a:visited,
+  a:focus {
+    font: inherit;
+    color: inherit;
+  }
 
-    a:hover {
-      background:#eaeaea;
-      box-shadow:0px 2px 10px 5px #97B1BF;
-    }
+  a > button {
+    font-weight: 600;
+  }
 
-    a:after {
-      content: "";
-      background: #ffc947;
-      display: block;
-      position: absolute;
-      padding-top: 300%;
-      padding-left: 350%;
-      margin-left: -20px !important;
-      margin-top: -120%;
-      opacity: 0;
-      transition: all 0.8s;
-    }
-
-    a:active:after {
-      padding: 0;
-      margin: 0;
-      opacity: 1;
-      transition: 0s;
-    }
+  a:nth-of-type(2) {
+    margin-left: 1rem;
   }
 `;
 
+// framermotion variant for outer container
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 1.25,
+      duration: 2,
+    },
+  },
+};
+
+const headingVariants = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
 export default function Intro() {
-  const firstLine = 'Hi, I\'m Tanzeel';
-  const secondLine = 'A Web Application Developer';
-  const thirdLine = 'Based in Toronto, Canada';
-
-  const sentence = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 0.5,
-        staggerChildren: 0.08,
-      },
-    },
-  };
-
-  const letter = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-
   return (
-    <IntroContainer>
-      <motion.div
-        className="intro"
-        variants={sentence}
-        initial="hidden"
-        animate="visible"
+    <IntroContainer
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+    >
+      <motion.h1
+        variants={headingVariants}
       >
-        <h1>
-          {firstLine.split('').map((char, index) => (
-            <motion.span className="lineOne" key={`${char}_${index * 3}`} variants={letter}>{char}</motion.span>
-          ))}
-        </h1>
-        <h2>
-          {secondLine.split('').map((char, index) => (
-            <motion.span className="lineTwo" key={`${char}_${index * 4}`} variants={letter}>{char}</motion.span>
-          ))}
-        </h2>
-        <h3>
-          {thirdLine.split('').map((char, index) => (
-            <motion.span className="lineThree" key={`${char}_${index * 5}`} variants={letter}>{char}</motion.span>
-          ))}
-        </h3>
+        Hi,
+        <br />
+        {' '}
+        I&apos;m
+        <span> Tanzeel</span>
+      </motion.h1>
+      <motion.h2
+        variants={headingVariants}
+      >
+        A Full Stack Web Developer
+      </motion.h2>
+      <motion.h3
+        variants={headingVariants}
+      >
+        Based in Toronto, ON
+      </motion.h3>
+      <motion.div
+        className="link-container"
+        variants={headingVariants}
+      >
+        <a
+          href="/about"
+          className="about-link"
+        >
+          <Button>
+            Learn More
+          </Button>
+        </a>
+        <a
+          className="github-link"
+          href="https://www.github.com/dw44"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <SiGithub size="3em" />
+
+        </a>
       </motion.div>
-      <div className="buttonContainer">
-        <a type="button" href="/tanzeel-ur-rehman-resume.pdf" target="_blank">résumé</a>
-        <a type="button" href="/" target="_blank">projects</a>
-      </div>
     </IntroContainer>
   );
 }

@@ -8,20 +8,18 @@ import Hamburger from './Hamburger';
 const StyledHeader = styled.header`
   width: 100%;
   height: 6.25rem;
-  padding: 1em 4em;
-  font-family: ${(props) => props.theme.fonts.headings};
-  font-weight: 900;
+  padding: 0 2rem;
+  font-family: ${(props) => props.theme.fonts.navbar};
   display: flex;
   justify-content: space-between;
-  font-size: 1em;
+  font-size: 1.2em;
   align-items: center;
-  background-color: #da0037;
-  box-shadow: rgba(200, 0, 0, 0.36) 0px 1px 3px, rgba(225, 0, 0, 0.72) 0px 1px 2px;
   color: ${(props) => props.theme.headerText};
   position: relative;
   
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 902px) {
     color: #fafafa;
+    padding: 0 4rem;
   }
 
   a, a:before,
@@ -34,12 +32,13 @@ const StyledHeader = styled.header`
 `;
 
 const Logo = styled.p`
-  color: #fafafa;
+  color: ${(props) => props.theme.headerText};
+  font-family: 'Red Hat Text', sans-serif;
   a {
-    font-size: 2.2em !important;  
+    font-size: 2.5rem;  
   }
   span {
-    color: #cfcfcf;
+    color: #ff304f;
   }
 `;
 
@@ -49,7 +48,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
     <StyledHeader>
       <Logo>
         <Link href="/">
-          <a>
+          <a href="/">
             <span>{'{ '}</span>
             T
             <span>{' }'}</span>

@@ -3,27 +3,28 @@ import styled from 'styled-components';
 const Button = styled.button`
   position: relative;
   text-transform: uppercase;
-  background-color: #ffc947;
+  background-color: ${(props) => props.theme.resumeButtonBG};
+  color: ${(props) => props.theme.resumeButtonTextMobile};
   border: none;
   padding: 20px;
   width: 200px;
   text-align: center;
-  transition-duration: 0.4s;
+  transition-duration: 0.8s;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
   font: inherit;
-  font-size: 16px;
-  color: #0a1931;
+  font-size: 1rem;
 
   &:hover {
     background:#eaeaea;
     box-shadow:0px 2px 10px 5px #97B1BF;
+    color: #002651;
   }
 
   &:after {
     content: "";
-    background: #ffc947;
+    background: ${(props) => props.theme.resumeButtonBG};
     display: block;
     position: absolute;
     padding-top: 300%;
@@ -40,19 +41,6 @@ const Button = styled.button`
     opacity: 1;
     transition: 0s;
   }
-
-  @media only screen and (max-width: 901px) {
-    background-color: ${(props) => props.theme.resumeButtonBG};
-    color: ${(props) => props.theme.resumeButtonTextMobile};
-  }
 `;
 
-export default function ResumeButton({ href, target, children }) {
-  return (
-    <a href="/tanzeel-ur-rehman-resume.pdf" target="_blank">
-      <Button>
-        résumé
-      </Button>
-    </a>
-  );
-}
+export default Button;

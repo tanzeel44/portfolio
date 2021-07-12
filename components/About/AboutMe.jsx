@@ -12,6 +12,7 @@ const About = styled(motion.div)`
     transform: rotate(180deg);
     position: absolute;
     top: 1rem;
+    left: 0;
     font-size: 4rem;
   }
 

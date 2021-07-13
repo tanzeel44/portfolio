@@ -6,7 +6,8 @@ const About = styled(motion.div)`
   height: 88%;
   width: 100%;
   position: relative;
-
+  padding: 10px;
+  
   h1 {
     writing-mode: vertical-rl;
     transform: rotate(180deg);

@@ -5,12 +5,13 @@ const Tech = styled(motion.div)`
   height: 88%;
   width: 100%;
   position: relative;
+  padding: 10px;
 
   h1 {
     writing-mode: vertical-rl;
     position: absolute;
     top: 1rem;
-    right: 0;
+    right: 0.7rem;
     font-size: 4rem;
   }
 
@@ -19,7 +20,8 @@ const Tech = styled(motion.div)`
     height: 100%;
     width: calc(100% - 4rem);
     position: absolute;
-    right: 0;
+    left: 0;
+    padding-right: 10px;
     font-weight: 500;
     font-size: 1rem;
 
@@ -41,6 +43,7 @@ export default function TechStack() {
   return (
     <Tech>
       <h1>My Tech</h1>
+      <section className="tech" />
     </Tech>
   );
 }

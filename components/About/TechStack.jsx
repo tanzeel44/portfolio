@@ -17,7 +17,7 @@ const Tech = styled(motion.div)`
     font-size: 4rem;
   }
 
-  h4 {
+  .heading {
     font-size: 2rem;
     grid-column: 1/-1;
     text-align: center;
@@ -97,9 +97,9 @@ export default function TechStack() {
     <Tech>
       <h1>My Tech</h1>
       <section className="tech">
-        <h4>My Core Stack:</h4>
+        <h4 className="heading">My Core Stack:</h4>
         {techStack.map((tech) => <TechCard title={tech.name} image={tech.image} />)}
-        <h4>What I'm Currently Learning:</h4>
+        <h4 className="heading">What I'm Currently Learning:</h4>
         {learning.map((tech) => <TechCard title={tech.name} image={tech.image} />)}
       </section>
 

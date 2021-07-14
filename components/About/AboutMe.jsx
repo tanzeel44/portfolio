@@ -18,7 +18,7 @@ const About = styled(motion.div)`
   }
 
   .about-text {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     height: 97%;
     width: calc(100% - 4rem);
     position: absolute;

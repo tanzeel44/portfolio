@@ -58,6 +58,9 @@ const Tech = styled(motion.div)`
       grid-template-columns: 33.33% 33.33% 33.33%;
     }
 
+    @media only screen and (min-width: 1280px) {
+      grid-template-columns: repeat(4, 25%);
+    }
     
   ::-webkit-scrollbar {
     width: 10px;
@@ -89,7 +92,7 @@ const techStack = [
   { name: 'JavaScript', image: 'javascript' },
   { name: 'React', image: 'react' },
   { name: 'Redux', image: 'redux' },
-  { name: 'Node.JS', image: 'node-js' },
+  { name: 'Node.JS', image: 'node' },
   { name: 'MongoDB', image: 'mongodb' },
   { name: 'Python', image: 'python' },
   { name: 'Git', image: 'git' },
@@ -107,7 +110,7 @@ export default function TechStack() {
       <section className="tech">
         <h4 className="heading">My Core Stack:</h4>
         {techStack.map((tech) => <div className="card-container"><TechCard title={tech.name} image={tech.image} /></div>)}
-        <h4 className="heading">What I&apost;m Currently Learning:</h4>
+        <h4 className="heading">What I&apos;m Currently Learning:</h4>
         {learning.map((tech) => <div className="card-container"><TechCard title={tech.name} image={tech.image} /></div>)}
       </section>
 

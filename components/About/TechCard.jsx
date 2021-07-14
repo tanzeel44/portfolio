@@ -5,14 +5,15 @@ const StyledCard = styled.div`
   width: 120px;
   display: grid;
   grid-template-rows: 120px 30px;
-  border: 1px solid white; 
   
   img {
     object-fit: fill;
+    max-height: 120px;
+    max-width: 120px;
   }
 
-  p {
-    font-weight: 600;
+  h4 {
+    font-weight: 700;
     font-size: 1.2rem;
     text-align: center;
     display: flex;
@@ -25,7 +26,7 @@ export default function TechCard({ image, title }) {
   return (
     <StyledCard>
       <img src={`/tech_icons/${image}.svg`} alt={title} />
-      <p>{title}</p>
+      <h4>{title}</h4>
     </StyledCard>
   );
 }

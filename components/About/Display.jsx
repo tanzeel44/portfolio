@@ -46,6 +46,7 @@ const DisplayContainer = styled(motion.div)`
       width: 100%;
     }
   }
+
 `;
 
 export default function Display() {

@@ -26,7 +26,7 @@ const Tech = styled(motion.div)`
   .tech {
     padding: 1rem;
     height: 97%;
-    width: calc(100% - 4.8rem);
+    width: calc(100% - 6rem);
     position: absolute;
     left: 0;
     overflow-y: scroll;
@@ -41,7 +41,7 @@ const Tech = styled(motion.div)`
     }
 
     @media only screen and (min-width: 768px) and (max-width: 991px) { 
-      font-size: 1.5rem;
+      font-size: 1.6
       grid-template-columns: 33.33% 33.33% 33.33%;
     }
 
@@ -49,6 +49,25 @@ const Tech = styled(motion.div)`
       font-size: 1.2rem;
       grid-template-columns: 33.33% 33.33% 33.33%;
     }
+
+    
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 4px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: green; 
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: blue; 
+  }
   }
 
   @media only screen and (min-width: 992px) {

@@ -59,7 +59,7 @@ export default function Display() {
     <DisplayContainer>
       <div className="mobile">
         <div className="menu">
-          <button onClick={handleClick} type="button">{`${nowShowing[0].toUpperCase()}${nowShowing.slice(1)}`}</button>
+          <button onClick={handleClick} type="button">{nowShowing === 'about' ? 'My Tech' : 'About Me'}</button>
         </div>
         {nowShowing === 'about' ? <AboutMe /> : <TechStack />}
       </div>

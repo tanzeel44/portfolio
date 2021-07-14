@@ -36,7 +36,15 @@ const Tech = styled(motion.div)`
     grid-row-gap: 2rem;
     grid-template-columns: 100%;
 
-    @media only screen and (min-width: 360px) and (max-width: 767px) {      
+    .card-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media only screen and (min-width: 375px) and (max-width: 767px) {      
       grid-template-columns: 50% 50%;
     }
 
@@ -98,9 +106,9 @@ export default function TechStack() {
       <h1>My Tech</h1>
       <section className="tech">
         <h4 className="heading">My Core Stack:</h4>
-        {techStack.map((tech) => <TechCard title={tech.name} image={tech.image} />)}
-        <h4 className="heading">What I'm Currently Learning:</h4>
-        {learning.map((tech) => <TechCard title={tech.name} image={tech.image} />)}
+        {techStack.map((tech) => <div className="card-container"><TechCard title={tech.name} image={tech.image} /></div>)}
+        <h4 className="heading">What I&apost;m Currently Learning:</h4>
+        {learning.map((tech) => <div className="card-container"><TechCard title={tech.name} image={tech.image} /></div>)}
       </section>
 
     </Tech>

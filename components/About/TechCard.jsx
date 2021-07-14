@@ -5,7 +5,7 @@ const StyledCard = styled.div`
   width: 120px;
   display: grid;
   grid-template-rows: 120px 30px;
-  
+
   img {
     object-fit: fill;
     max-height: 120px;

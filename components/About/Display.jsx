@@ -22,10 +22,10 @@ const DisplayContainer = styled(motion.div)`
 
   .menu {
     height: 12%;
-    display: flex;
 
     button {
-      flex: 1; 
+      width: 100%;
+      height: 100%;
       border: none;
       font-family: inherit;
       font-size: 1.25rem;
@@ -46,19 +46,20 @@ const DisplayContainer = styled(motion.div)`
       width: 100%;
     }
   }
-
 `;
 
 export default function Display() {
   // only for mobile. both will be displayed on desktop
   const [nowShowing, setNowShowing] = useState('about');
 
+  const handleClick = () => {
+    nowShowing === 'about' ? setNowShowing('tech') : setNowShowing('about');
+  };
   return (
     <DisplayContainer>
       <div className="mobile">
         <div className="menu">
-          <button onClick={() => setNowShowing('about')} type="button">About</button>
-          <button onClick={() => setNowShowing('tech')} type="button">My Tech</button>
+          <button onClick={handleClick} type="button">{`${nowShowing[0].toUpperCase()}${nowShowing.slice(1)}`}</button>
         </div>
         {nowShowing === 'about' ? <AboutMe /> : <TechStack />}
       </div>

@@ -19,19 +19,20 @@ const About = styled(motion.div)`
 
   .about-text {
     padding: 1rem;
-    height: 100%;
+    height: 97%;
     width: calc(100% - 4rem);
     position: absolute;
     right: 0;
     font-weight: 500;
     font-size: 1rem;
+    overflow-y: auto;
 
     @media only screen and (min-width: 768px) and (max-width: 991px) { 
       font-size: 1.5rem;
     }
 
     @media only screen and (min-width: 992px) {
-      font-size: 1.2rem;
+      font-size: 1.07rem;
     }
   }
 

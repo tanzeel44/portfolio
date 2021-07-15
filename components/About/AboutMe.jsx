@@ -1,64 +1,123 @@
 /* eslint-disable max-len */
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const About = styled(motion.div)`
-  height: 88%;
+  height: 100%;
   width: 100%;
-  position: relative;
-  padding: 10px;
-  
-  h1 {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    position: absolute;
-    top: 1rem;
-    left: 0;
-    font-size: 4rem;
+  padding: 2rem 0;
+
+  .vector {
+    display: none;
   }
 
-  .about-text {
-    padding: 0.5rem 1rem;
-    height: 97%;
-    width: calc(100% - 4rem);
-    position: absolute;
-    right: 0;
-    font-weight: 500;
-    font-size: 1rem;
-    overflow-y: auto;
+  .description {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+  }
 
-    @media only screen and (min-width: 768px) and (max-width: 991px) { 
-      font-size: 1.5rem;
+  .about-me-title {
+    font-size: 3rem;
+    text-align: center;
+    
+    @media only screen and (min-width: 375px) and (max-width: 539px) {
+      font-size: 4rem;
+    }
+
+    @media only screen and (min-width: 540px) {
+      font-size: 5rem;
     }
 
     @media only screen and (min-width: 992px) {
-      font-size: 1.07rem;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      position: absolute;
+      top: 0;
+      left: 4rem;
+      height: 100%;
+      text-align: center;
     }
   }
 
-  @media only screen and (min-width: 992px) {
-    height: 100%;
+  .about-me-text {
+    width: 100%;
+    height: calc(100% - 3rem);
+    overflow-y: scroll;
+    padding: 1rem 0;
+    font-weight: 600;
+    line-height: 1.1;
+
+    @media only screen and (min-width: 375px) and (max-width: 539px) {
+      height: calc(100% - 4rem);
+    }
+
+    @media only screen and (min-width: 540px) and  (min-width: 991px) {
+      height: calc(100% - 6rem);
+    }
+
+    @media only screen and (min-width: 992px) {
+      height: 100%;
+      width: calc(100% - 10rem);
+      position: absolute;
+      right: 0;
+      overflow-y: auto;
+      font-size: 1.444rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
+
+  .text-container {
+    padding: 0 1rem;
+  }
+
+  @media only screen and (min-width: 992px) {   
+     .vector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      object-fit: contain;
+    }
+    
+    display: grid;
+    grid-template-columns: 65% 35%;
+  }
+
 `;
 
 export default function AboutMe() {
   return (
     <About>
-      <h1>About Me</h1>
-      <section className="about-text">
-        <p>
-          Hi, my name is Tanzeel and I&apos;m a Full Stack Software Developer based in Toronto, Canada. Over the last three years, I have steadily worked to build up a skillset, and portfolio of projects, with a focus on web application development.
-        </p>
-        <br />
-        <p>
-          My journey towards becoming a software developer started by chance, when I had to automate data entry for a project I was supervising, leading me down the rabbit hole that would have me spend the next three years learning everything I could about programming, and how to translate what I was learning into actual projects. My persistence, and ability to easily learn new concepts, has taken me from never having written a line of JavaScript, to building fully functioning web applications covering the entire technology stack, while juggling a full time career as a Senior Engineer, and an unplanned move across the world during a pandemic.
-        </p>
-        <br />
-        <p>
-          When I&apos;m not coding, I enjoy cooking, running, following esports, and creating some truly mind boggling playlists for my workouts (&quot;Wu Tang Clan&quot; and &quot;Amon Amarth&quot; anyone?).
-        </p>
-        <br />
-      </section>
+      <div className="description">
+        <h1 className="about-me-title">About Me</h1>
+        <section className="about-me-text">
+          <div className="text-container">
+            <p>
+              Hi, my name is Tanzeel and I&apos;m a Full Stack Software Developer based in Toronto, Canada. Over the last three years, I have steadily worked to polish my skillset, and build a portfolio of projects, with a focus on web application development.
+            </p>
+            <br />
+            <p>
+              My journey towards becoming a software developer started by chance, when I had to automate data entry for a project I was supervising, leading me down the rabbit hole that would have me spend the next three years learning everything I could about programming, and how to translate what I was learning into actual projects. My persistence, and ability to easily learn new concepts, has taken me from never having written a line of JavaScript, to building fully functioning web applications covering the entire technology stack, while juggling a full time career as a Senior Engineer, and an unplanned move across the world during a pandemic.
+            </p>
+            <br />
+            <p>
+              When I&apos;m not coding, I enjoy cooking, running, following esports, and creating some truly mind boggling playlists for my workouts (&quot;Wu Tang Clan&quot; and &quot;Amon Amarth&quot; anyone?).
+            </p>
+            <br />
+          </div>
+
+        </section>
+      </div>
+      <div className="vector">
+        <Image src="/about.svg" width="640" height="480" layout="intrinsic" />
+      </div>
     </About>
   );
 }

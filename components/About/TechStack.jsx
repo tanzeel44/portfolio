@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import TechCard from './TechCard';
 
 const Tech = styled(motion.div)`
   height: 100%;
@@ -65,10 +64,8 @@ export default function TechStack() {
     <Tech>
       <h1>My Tech</h1>
       <section className="tech">
-        <h4 className="heading">My Core Stack:</h4>
-        {techStack.map((tech) => <div className="card-container"><TechCard title={tech.name} image={tech.image} /></div>)}
-        <h4 className="heading">What I&apos;m Currently Learning:</h4>
-        {learning.map((tech) => <div className="card-container"><TechCard title={tech.name} image={tech.image} /></div>)}
+        <div className="current" />
+        <div className="learning" />
       </section>
     </Tech>
   );

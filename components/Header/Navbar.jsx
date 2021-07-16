@@ -24,7 +24,7 @@ const StyledNav = styled.div`
     transition: none !important;
   }
   
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 902px) {
     position: relative;
     left: 0;
     top: 0;

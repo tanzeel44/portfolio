@@ -45,6 +45,7 @@ const About = styled(motion.div)`
 
   .about-me-text {
     width: 100%;
+    height: calc(100% - 3rem);
     overflow-y: scroll;
     padding: 1rem 0;
     font-weight: 600;

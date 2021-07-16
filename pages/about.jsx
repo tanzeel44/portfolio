@@ -19,7 +19,10 @@ export default function About() {
   return (
     <AboutContainer>
       <AboutMe />
+<<<<<<< HEAD
+=======
       <div style={{ borderTop: 'none' }} />
+>>>>>>> parent of 1954498 (about layout wip)
     </AboutContainer>
   );
 }

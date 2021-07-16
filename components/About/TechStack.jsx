@@ -64,7 +64,12 @@ export default function TechStack() {
   return (
     <Tech>
       <h1>My Tech</h1>
-      <section className="tech" />
+      <section className="tech">
+        <h4 className="heading">My Core Stack:</h4>
+        {techStack.map((tech) => <div className="card-container"><TechCard title={tech.name} image={tech.image} /></div>)}
+        <h4 className="heading">What I&apos;m Currently Learning:</h4>
+        {learning.map((tech) => <div className="card-container"><TechCard title={tech.name} image={tech.image} /></div>)}
+      </section>
     </Tech>
   );
 }

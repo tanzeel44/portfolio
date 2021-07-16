@@ -84,7 +84,7 @@ const StyledHamburger = styled.div`
     transform: translateY(-50%) rotate(-45deg) scaleX(1);
   }
 
-  @media only screen and (min-width: 902px) {
+  @media only screen and (min-width: 992px) {
     &, 
     & * {
       display: none;

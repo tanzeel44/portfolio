@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 // import Display from '../components/About/Display';
 import AboutMe from '../components/About/AboutMe';
-import TechStack from '../components/About/TechStack';
 
 const AboutContainer = styled(motion.div)`
   width: 100%;
@@ -21,6 +20,10 @@ export default function About() {
   return (
     <AboutContainer>
       <AboutMe />
+<<<<<<< HEAD
+=======
+      <div style={{ borderTop: 'none' }} />
+>>>>>>> parent of 1954498 (about layout wip)
     </AboutContainer>
   );
 }

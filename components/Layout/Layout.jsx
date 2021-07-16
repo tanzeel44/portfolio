@@ -33,7 +33,11 @@ export default function Layout({ children, darkMode, toggleDarkMode }) {
         height: `calc(var(--vh, ${viewportHeight}) * 100)`,
       }}
       >
-        <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <Header
+          viewportHeight={viewportHeight}
+          darkMode={darkMode}
+          toggleDarkMode={toggleDarkMode}
+        />
         <div style={{
           height: 'calc(100% - 6.25rem)',
         }}

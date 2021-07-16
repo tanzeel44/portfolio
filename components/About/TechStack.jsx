@@ -71,10 +71,7 @@ export default function TechStack() {
   return (
     <Tech>
       <h1>My Tech</h1>
-      <section className="tech">
-        <div className="current" />
-        <div className="learning" />
-      </section>
+      <section className="tech" />
     </Tech>
   );
 }

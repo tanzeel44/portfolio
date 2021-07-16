@@ -20,7 +20,7 @@ const AboutContainer = styled(motion.div)`
 export default function About() {
   return (
     <AboutContainer>
-      <TechStack />
+      <AboutMe />
     </AboutContainer>
   );
 }

@@ -26,7 +26,7 @@ const StyledNav = styled.div`
     transition: none !important;
   }
   
-  @media only screen and (min-width: 902px) {
+  @media only screen and (min-width: 992px) {
     position: relative;
     left: 0;
     top: 0;
@@ -53,7 +53,7 @@ const DarkModeButton = styled.button`
   background: transparent;
   margin-top: 2em;
 
-  @media only screen and (min-width: 902px) {
+  @media only screen and (min-width: 992px) {
     margin: 0 0 0 2em;
   }
 `;

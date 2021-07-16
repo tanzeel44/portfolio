@@ -31,7 +31,7 @@ const StyledMenu = styled.ul`
       left: 0; 
     }
 
-    @media only screen and (min-width: 902px) {
+    @media only screen and (min-width: 992px) {
       display: inline-block;
       margin: 0 1em;
       font-size: 0.4em;

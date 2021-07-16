@@ -6,7 +6,6 @@ import Image from 'next/image';
 const About = styled(motion.div)`
   height: 100%;
   width: 100%;
-  padding: 2rem 0;
 
   .vector {
     display: none;
@@ -61,12 +60,12 @@ const About = styled(motion.div)`
     }
 
     @media only screen and (min-width: 992px) {
-      height: 100%;
+      height: calc(100% - 1rem);
       width: calc(100% - 10rem);
       position: absolute;
       right: 0;
       overflow-y: auto;
-      font-size: 1.444rem;
+      font-size: 1.333rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -100,7 +99,7 @@ export default function AboutMe() {
         <section className="about-me-text">
           <div className="text-container">
             <p>
-              Hi, my name is Tanzeel and I&apos;m a Full Stack Software Developer based in Toronto, Canada. Over the last three years, I have steadily worked to polish my skillset, and build a portfolio of projects, with a focus on web application development.
+              Hi, my name is Tanzeel and I&apos;m a Full Stack Web Application Developer based in Toronto, Canada. Over the last three years, I have steadily worked to polish my skillset, and build a portfolio of projects, with a focus on web application development.
             </p>
             <br />
             <p>

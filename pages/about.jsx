@@ -10,7 +10,6 @@ const AboutContainer = styled(motion.div)`
   font-family: ${(props) => props.theme.fonts.main};
   display: grid;
   grid-template-rows: 100%;  
-
   @media only screen and (min-width: 992px) {
     grid-template-rows: 60% 40%;
   }

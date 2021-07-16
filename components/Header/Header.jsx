@@ -17,11 +17,10 @@ const StyledHeader = styled.header`
   color: ${(props) => props.theme.headerText};
   position: relative;
   
-  @media only screen and (min-width: 902px) {
+  @media only screen and (min-width: 992px) {
     color: #fafafa;
     padding: 0 4rem;
   }
-
   a, a:before,
   a:after, a:visited {
     text-decoration: none;
@@ -42,7 +41,7 @@ const Logo = styled.p`
   }
 `;
 
-export default function Header({ darkMode, toggleDarkMode }) {
+export default function Header({ darkMode, toggleDarkMode, viewportHeight }) {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <StyledHeader>
@@ -61,6 +60,7 @@ export default function Header({ darkMode, toggleDarkMode }) {
           toggleDarkMode={toggleDarkMode}
           setNavOpen={setNavOpen}
           open={navOpen}
+          viewportHeight={viewportHeight}
         />
         <Hamburger openHandler={setNavOpen} openState={navOpen} />
       </nav>

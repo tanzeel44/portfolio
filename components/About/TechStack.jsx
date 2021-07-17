@@ -1,45 +1,8 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-
 const Tech = styled(motion.div)`
-  height: 100%;
-  width: 100%;
-  border: 2px solid blue;
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-    
-    @media only screen and (min-width: 375px) and (max-width: 539px) {
-      font-size: 4rem;
-    }
-    @media only screen and (min-width: 540px) {
-      font-size: 5rem;
-    }
-  }
-  .tech {
-    height: calc(100% - 3rem);
-    overflow: auto;
-    @media only screen and (min-width: 375px) and (max-width: 539px) {
-      height: calc(100% - 4rem);
-    }
-    @media only screen and (min-width: 540px) {
-      height: calc(100% - 5rem);
-    }
-    @media only screen and (min-width: 992px) {
-      display: grid;
-      grid-template-columns: 70% 30%;
-      height: calc(100% - 5rem);
-    }
-  }
-  .current {
-    border: 1px solid green;
-    height: 65%;
-  }
-  .learning {
-    border: 1px solid red;
-    height: 35%;
-  }
+
 `;
 
 const techStack = [
@@ -63,10 +26,7 @@ export default function TechStack() {
   return (
     <Tech>
       <h1>My Tech</h1>
-      <section className="tech">
-        <div className="current" />
-        <div className="learning" />
-      </section>
+      <section className="tech" />
     </Tech>
   );
 }

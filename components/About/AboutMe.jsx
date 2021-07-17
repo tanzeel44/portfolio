@@ -6,9 +6,22 @@ import Image from 'next/image';
 const About = styled(motion.div)`
   height: 100%;
   width: 100%;
+  @media only screen and (min-width: 992px) {   
+    height: 100%;
+    display: grid;
+    grid-template-columns: 65% 35%;
+  }
 
   .vector {
     display: none;
+    
+    @media only screen and (min-width: 992px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      object-fit: contain;
+    }
   }
 
   .description {
@@ -75,20 +88,6 @@ const About = styled(motion.div)`
   .text-container {
     padding: 0 1rem;
   }
-
-  @media only screen and (min-width: 992px) {   
-     .vector {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      object-fit: contain;
-    }
-    
-    display: grid;
-    grid-template-columns: 65% 35%;
-  }
-
 `;
 
 export default function AboutMe() {

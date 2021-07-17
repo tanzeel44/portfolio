@@ -30,7 +30,7 @@ export default function Layout({ children, darkMode, toggleDarkMode }) {
       </Head>
       <Global />
       <Page style={{
-        height: `calc(var(--vh, ${viewportHeight}) * 100)`,
+        height: `${viewportHeight * 100}px`,
       }}
       >
         <Header
@@ -39,7 +39,7 @@ export default function Layout({ children, darkMode, toggleDarkMode }) {
           toggleDarkMode={toggleDarkMode}
         />
         <div style={{
-          height: 'calc(100% - 6.25rem)',
+          height: `calc(${viewportHeight * 100}px - 6.25rem)`,
         }}
         >
           {children}

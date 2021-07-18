@@ -91,11 +91,49 @@ const About = styled(motion.div)`
 `;
 
 export default function AboutMe() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 2,
+        duration: 1,
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 2,
+      },
+    },
+  };
+
   return (
-    <About>
+    <About
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+    >
       <div className="description">
-        <h1 className="about-me-title">About Me</h1>
-        <section className="about-me-text">
+        <motion.h1
+          className="about-me-title"
+          variants={childVariants}
+          initial="hidden"
+          animate="show"
+        >
+          About Me
+
+        </motion.h1>
+        <motion.div
+          className="about-me-text"
+          variants={childVariants}
+          initial="hidden"
+          animate="show"
+        >
           <div className="text-container">
             <p>
               Hi, my name is Tanzeel and I&apos;m a Full Stack Web Application Developer based in Toronto, Canada. Over the last three years, I have steadily worked to polish my skillset, and build a portfolio of projects, with a focus on web application development.
@@ -111,7 +149,7 @@ export default function AboutMe() {
             <br />
           </div>
 
-        </section>
+        </motion.div>
       </div>
       <div className="vector">
         <Image src="/about.svg" width="640" height="480" layout="intrinsic" />

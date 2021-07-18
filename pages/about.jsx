@@ -32,7 +32,6 @@ const AboutContainer = styled(motion.div)`
   }
 
   .toggle-display {
-    border: 1px solid blue;
     background-color: transparent;
     font-family: inherit;
     font-weight: 900;
@@ -40,7 +39,10 @@ const AboutContainer = styled(motion.div)`
     color: inherit;
     cursor: pointer;
     transition: all 0.8s;
+    border: none;
+    box-shadow: 0px 0 2px rgba(0, 0, 0, 0.5), 0px 0 3px rgba(255, 255, 255, 0.7);
   }
+
 `;
 
 export default function About() {
@@ -62,18 +64,14 @@ export default function About() {
           {/* 0 => showing AM, button says tech and vice versa */}
           {nowShowing === 0
             ? (
-              <motion.span
-                className="now-showing-text"
-              >
+              <span className="now-showing-text">
                 See My Tech
-              </motion.span>
+              </span>
             )
             : (
-              <motion.span
-                className="now-showing-text"
-              >
+              <span className="now-showing-text">
                 About Me
-              </motion.span>
+              </span>
             )}
         </button>
       </div>

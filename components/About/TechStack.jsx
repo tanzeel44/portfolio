@@ -32,6 +32,7 @@ const Tech = styled(motion.div)`
     display: grid;
     grid-template-columns: 100%;
     grid-row-gap: 2rem;
+    overflow: auto;
 
     @media only screen and (min-width: 360px) and (max-width: 539px) {
       height: calc(100% - 5rem);
@@ -43,10 +44,14 @@ const Tech = styled(motion.div)`
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media only screen and (min-width: 992px) { 
+    @media only screen and (min-width: 992px) and (max-width: 1279px) { 
+      height: calc(100% - 5rem);
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media only screen and (min-width: 1280px) { 
       height: calc(100% - 5rem);
       grid-template-columns: repeat(9, 1fr);
-      overflow: auto;
     }
   }
 

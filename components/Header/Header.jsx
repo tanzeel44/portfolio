@@ -41,7 +41,7 @@ const Logo = styled.p`
   }
 `;
 
-export default function Header({ darkMode, toggleDarkMode, viewportHeight }) {
+export default function Header({ darkMode, toggleDarkMode }) {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <StyledHeader>
@@ -60,7 +60,6 @@ export default function Header({ darkMode, toggleDarkMode, viewportHeight }) {
           toggleDarkMode={toggleDarkMode}
           setNavOpen={setNavOpen}
           open={navOpen}
-          viewportHeight={viewportHeight}
         />
         <Hamburger openHandler={setNavOpen} openState={navOpen} />
       </nav>

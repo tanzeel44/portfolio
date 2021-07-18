@@ -7,6 +7,7 @@ import Button from '../Button';
 
 const StyledNav = styled.div`
   width: 100vw;
+  height: calc(100vh - 6.25rem);
   z-index: 20;
   text-align: center;
   position: absolute;
@@ -50,12 +51,12 @@ const DarkModeButton = styled.button`
   cursor: pointer;
   background: transparent;
   margin-top: 2em;
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 902px) {
     margin: 0 0 0 2em;
   }
 `;
 export default function Navbar({
-  open, setNavOpen, darkMode, toggleDarkMode, viewportHeight,
+  open, setNavOpen, darkMode, toggleDarkMode,
 }) {
   // control when menu animations are on and when they aren't
   const [animationOff, setAnimationOff] = useState(true);
@@ -66,7 +67,7 @@ export default function Navbar({
     window.addEventListener('resize', () => {
       setAnimationOff(true);
       clearTimeout(resizeTimer);
-      if (window.innerWidth >= 992) {
+      if (window.innerWidth > 902) {
         setNavOpen(false);
       }
       resizeTimer = setTimeout(() => {
@@ -76,11 +77,7 @@ export default function Navbar({
   }, []);
 
   return (
-    <StyledNav
-      className={animationOff ? 'pause' : ''}
-      open={open}
-      style={{ height: `calc(var(--vh, ${viewportHeight}) * 100 - 6.25rem)` }}
-    >
+    <StyledNav className={animationOff ? 'pause' : ''} open={open}>
       <NavMenu />
       <a href="/tanzeel-ur-rehman-resume.pdf" target="_blank">
         <Button>

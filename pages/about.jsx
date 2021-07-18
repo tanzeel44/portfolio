@@ -38,6 +38,8 @@ const AboutContainer = styled(motion.div)`
     font-weight: 900;
     font-size: 1.7rem;
     color: inherit;
+    cursor: pointer;
+    transition: all 0.8s;
   }
 `;
 
@@ -58,7 +60,21 @@ export default function About() {
         {nowShowing === 0 ? <AboutMe /> : <TechStack />}
         <button onClick={toggleNowShowing} className="toggle-display" type="button">
           {/* 0 => showing AM, button says tech and vice versa */}
-          {nowShowing === 0 ? 'See My Tech' : 'About Me'}
+          {nowShowing === 0
+            ? (
+              <motion.span
+                className="now-showing-text"
+              >
+                See My Tech
+              </motion.span>
+            )
+            : (
+              <motion.span
+                className="now-showing-text"
+              >
+                About Me
+              </motion.span>
+            )}
         </button>
       </div>
       <div className="desktop-display">

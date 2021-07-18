@@ -96,8 +96,7 @@ export default function AboutMe() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 2,
-        duration: 1,
+        duration: 3,
       },
     },
   };
@@ -107,34 +106,31 @@ export default function AboutMe() {
     show: {
       opacity: 1,
       transition: {
-        duration: 2,
+        duration: 3,
       },
     },
   };
-
   return (
-    <About
-      variants={containerVariants}
-      initial="hidden"
-      animate="show"
-    >
-      <div className="description">
-        <motion.h1
+    <About>
+      <motion.div
+        className="description"
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"
+      >
+        <h1
           className="about-me-title"
-          variants={childVariants}
-          initial="hidden"
-          animate="show"
         >
           About Me
 
-        </motion.h1>
+        </h1>
         <motion.div
           className="about-me-text"
           variants={childVariants}
           initial="hidden"
           animate="show"
         >
-          <div className="text-container">
+          <div>
             <p>
               Hi, my name is Tanzeel and I&apos;m a Full Stack Web Application Developer based in Toronto, Canada. Over the last three years, I have steadily worked to polish my skillset, and build a portfolio of projects, with a focus on web application development.
             </p>
@@ -148,9 +144,8 @@ export default function AboutMe() {
             </p>
             <br />
           </div>
-
         </motion.div>
-      </div>
+      </motion.div>
       <div className="vector">
         <Image src="/about.svg" width="640" height="480" layout="intrinsic" />
       </div>

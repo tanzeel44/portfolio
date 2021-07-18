@@ -9,7 +9,7 @@ import TechStack from '../components/About/TechStack';
 const AboutContainer = styled(motion.div)`
   width: 100%;
   height: 100%;
-  font-family: ${(props) => props.theme.fonts.main};
+  font-family: ${(props) => props.theme.fonts.main};\
 
   .mobile-display {
     height: 100%;
@@ -43,7 +43,7 @@ const AboutContainer = styled(motion.div)`
 
 export default function About() {
   // 0 = About Me; 1 = Tech Stack
-  const [nowShowing, setNowShowing] = useState(1);
+  const [nowShowing, setNowShowing] = useState(0);
 
   const toggleNowShowing = () => {
     if (nowShowing === 0) setNowShowing(1);

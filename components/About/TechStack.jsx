@@ -5,7 +5,8 @@ import TechCard from './TechCard';
 
 const Tech = styled(motion.div)`
   height: 100%;
-
+  position: relative;
+    
   h1 {
     font-size: 3rem;
     padding-bottom: 1rem;
@@ -18,13 +19,16 @@ const Tech = styled(motion.div)`
     @media only screen and (min-width: 540px) {
       font-size: 5rem;
     }
+
+    @media only screen and (min-width: 992px) {
+      font-size: 4rem;
+    }
   }
 
   .tech {
     height: calc(100% - 4rem);
     width: 100%;
     padding-top: 10px;
-    overflow-y: auto;
     display: grid;
     grid-template-columns: 100%;
     grid-row-gap: 2rem;
@@ -40,7 +44,9 @@ const Tech = styled(motion.div)`
     }
 
     @media only screen and (min-width: 992px) { 
-      
+      height: calc(100% - 5rem);
+      grid-template-columns: repeat(9, 1fr);
+      overflow: auto;
     }
   }
 

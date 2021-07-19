@@ -110,18 +110,6 @@ export default function TechStack() {
       opacity: 1,
       transition: {
         duration: 2,
-        staggerChildren: 1.5,
-      },
-    },
-  };
-
-  // for the .tech section
-  const childVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        duration: 3,
       },
     },
   };
@@ -137,12 +125,14 @@ export default function TechStack() {
       </h1>
       <motion.div
         className="tech"
-        variants={childVariants}
+        variants={containerVariants}
         initial="hidden"
         animate="show"
       >
         {techStack.map((tech) => (
-          <div className="card-container" key={tech.name}><TechCard image={tech.image} title={tech.name} /></div>
+          <div className="card-container" key={tech.name}>
+            <TechCard image={tech.image} title={tech.name} />
+          </div>
         ))}
         <h2 className="learning-tech">
           Currently Learning:

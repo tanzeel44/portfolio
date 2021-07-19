@@ -34,6 +34,23 @@ const Tech = styled(motion.div)`
     grid-row-gap: 2rem;
     overflow: auto;
 
+    
+    ::-webkit-scrollbar {
+      width: 1rem;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    ::-webkit-scrollbar-thumb {
+      background: #28c7fa; 
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #775ada; 
+    }
+
     @media only screen and (min-width: 360px) and (max-width: 539px) {
       height: calc(100% - 5rem);
       grid-template-columns: repeat(2, 50%);
@@ -87,10 +104,43 @@ const learning = [
 ];
 
 export default function TechStack() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 2,
+        staggerChildren: 1.5,
+      },
+    },
+  };
+
+  // for the .tech section
+  const childVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 3,
+      },
+    },
+  };
+
   return (
-    <Tech>
-      <h1>My Tech</h1>
-      <section className="tech">
+    <Tech
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+    >
+      <h1>
+        My Tech
+      </h1>
+      <motion.div
+        className="tech"
+        variants={childVariants}
+        initial="hidden"
+        animate="show"
+      >
         {techStack.map((tech) => (
           <div className="card-container" key={tech.name}><TechCard image={tech.image} title={tech.name} /></div>
         ))}
@@ -100,7 +150,7 @@ export default function TechStack() {
         {learning.map((tech) => (
           <div className="card-container" key={tech.name}><TechCard image={tech.image} title={tech.name} /></div>
         ))}
-      </section>
+      </motion.div>
     </Tech>
   );
 }

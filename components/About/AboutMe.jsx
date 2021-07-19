@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const About = styled(motion.div)`
+const About = styled.div`
   height: 100%;
   width: 100%;
   @media only screen and (min-width: 992px) {   
@@ -59,10 +59,26 @@ const About = styled(motion.div)`
   .about-me-text {
     width: 100%;
     height: calc(100% - 3rem);
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 1rem 0;
     font-weight: 600;
     line-height: 1.1;
+
+    ::-webkit-scrollbar {
+      width: 1rem;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    ::-webkit-scrollbar-thumb {
+      background: #28c7fa; 
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #775ada; 
+    }
 
     @media only screen and (min-width: 375px) and (max-width: 539px) {
       height: calc(100% - 4rem);
@@ -77,7 +93,6 @@ const About = styled(motion.div)`
       width: calc(100% - 10rem);
       position: absolute;
       right: 0;
-      overflow-y: auto;
       font-size: 1.333rem;
       display: flex;
       align-items: center;
@@ -110,6 +125,7 @@ export default function AboutMe() {
       },
     },
   };
+
   return (
     <About>
       <motion.div
@@ -118,12 +134,12 @@ export default function AboutMe() {
         initial="hidden"
         animate="show"
       >
-        <h1
+        <motion.h1
           className="about-me-title"
         >
           About Me
 
-        </h1>
+        </motion.h1>
         <motion.div
           className="about-me-text"
           variants={childVariants}

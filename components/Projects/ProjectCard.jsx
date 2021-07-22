@@ -1,9 +1,9 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 const Card = styled.div`
   font-family: inherit;
-  height: 400px;
-  width: 400px;
+  height: 280px;
+  width: 280px;
   position: relative;
   perspective: 500px;
   background-color: transparent;
@@ -14,7 +14,8 @@ const Card = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: box-shadow 0.5s, transform 1s ease 0.5s;
+    border-radius: inherit;
+    transition: box-shadow 0.5s, transform 0.8s ease-in 0.7s;
     transform-style: preserve-3d;
   }
   
@@ -33,7 +34,7 @@ const Card = styled.div`
     color: #03446A;
     text-align: center;
     font-size: 60px;
-    border-radius: 5px;
+    border-radius: inherit;
     backface-visibility: hidden;
   }
   

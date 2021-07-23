@@ -13,6 +13,7 @@ const theme = {
     headerText: '#775ada',
     resumeButtonBG: '#ff304f',
     resumeButtonTextMobile: '#fcfcfc',
+    cardShadow: 'rgba(0,0,0,0.5);',
     fonts,
   },
   dark: {
@@ -21,6 +22,7 @@ const theme = {
     headerText: '#28c7fa',
     resumeButtonBG: '#ff304f',
     resumeButtonTextMobile: '#fcfcfc',
+    cardShadow: 'rgba(252,252,252,0.5);',
     fonts,
   },
 };

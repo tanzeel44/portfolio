@@ -7,7 +7,7 @@ const ProjectList = styled.div`
   width: 100%;
   height: 100%;
   border: 6px solid #121212;
-  font-family: inherit;
+  font-family: ${(props) => props.theme.fonts.main};
   
   display: flex;
   align-items: center;
@@ -20,7 +20,10 @@ export default function Projects() {
       <Head>
         <title>My Projects</title>
       </Head>
-      <ProjectCard />
+      <div className="card-container">
+        <ProjectCard title="Axe" />
+        <ProjectCard title="Leshrac" />
+      </div>
     </ProjectList>
   );
 }

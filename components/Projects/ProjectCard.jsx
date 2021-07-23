@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
+import CardFront from './CardFront';
+import CardBack from './CardBack';
+
 const Card = styled.div`
   font-family: inherit;
-  height: 280px;
-  width: 280px;
+  height: 240px;
+  width: 240px;
   position: relative;
   perspective: 500px;
   background-color: transparent;
@@ -20,28 +23,13 @@ const Card = styled.div`
   }
   
   &:hover .content {
-    box-shadow: 0 0 24px rgba(0,0,0,0.8);
+    box-shadow: 0 0 20px ${(props) => props.theme.cardShadow};
     transform: rotateY( 180deg);
   }
-  
-  .front,
-  .back {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: white;
-    line-height: 300px;
-    color: #03446A;
-    text-align: center;
-    font-size: 60px;
-    border-radius: inherit;
-    backface-visibility: hidden;
-  }
-  
-  .back {
-    background: #03446A;
-    color: white;
-    transform: rotateY( 180deg );
+
+  .test {
+    box-shadow: 0 0 20px ${(props) => props.theme.cardShadow};
+    transform: rotateY( 180deg);
   }
 `;
 
@@ -49,12 +37,8 @@ export default function ProjectCard() {
   return (
     <Card>
       <div className="content">
-        <div className="front">
-          Front
-        </div>
-        <div className="back">
-          Back!
-        </div>
+        <CardFront title="Come to Axe" />
+        <CardBack />
       </div>
     </Card>
   );

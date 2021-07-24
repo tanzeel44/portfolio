@@ -6,12 +6,21 @@ import ProjectCard from '../components/Projects/ProjectCard';
 const ProjectList = styled.div`
   width: 100%;
   height: 100%;
-  border: 6px solid #121212;
   font-family: ${(props) => props.theme.fonts.main};
   
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .page-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 
+    
+    @media only screen and (min-width: 375px) {
+      font-size: 3rem;
+    }
+  }
+
+  .card-container {
+    padding: 10px;
+  }
 `;
 
 export default function Projects() {
@@ -20,9 +29,11 @@ export default function Projects() {
       <Head>
         <title>My Projects</title>
       </Head>
+      <h1 className="page-title">
+        My Projects
+      </h1>
       <div className="card-container">
-        <ProjectCard title="Axe" />
-        <ProjectCard title="Leshrac" />
+        <ProjectCard title="Weather" imageFileName="weather_mobile" />
       </div>
     </ProjectList>
   );

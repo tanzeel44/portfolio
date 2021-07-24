@@ -13,6 +13,11 @@ const Card = styled.div`
   border-radius: 5px;
   cursor: pointer;
 
+  @media only screen and (min-width: 375px) {
+    width: 320px;
+    height: 320px;
+  }
+
   .content {
     position: absolute;
     width: 100%;
@@ -33,11 +38,11 @@ const Card = styled.div`
   }
 `;
 
-export default function ProjectCard() {
+export default function ProjectCard({ title, imageFileName }) {
   return (
     <Card>
       <div className="content">
-        <CardFront title="Come to Axe" />
+        <CardFront {...{ title, imageFileName }} />
         <CardBack />
       </div>
     </Card>

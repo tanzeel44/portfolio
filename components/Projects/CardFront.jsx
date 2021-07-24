@@ -21,18 +21,21 @@ const Front = styled.div`
 
   h1 {
     position: absolute;
-    width: 240px:
+    font-size: 3rem;
     z-index: 2;
-    margin-top: 50%;
+    top: calc(50% - 1.5rem);
+    left: 0;
+    right: 0;
     text-align: center;
-    border: 1px solid green;
-  }
+  } 
 `;
 
 export default function CardFront({ title, imageFileName }) {
   return (
     <Front>
-      <h1>{title}</h1>
+      <div className="title-wrapper">
+        <h1>{title}</h1>
+      </div>
       <img
         src={`/screen_captures/${imageFileName}.png`}
         alt={title}

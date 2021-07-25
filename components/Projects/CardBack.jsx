@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ProjectOverview from './ProjectOverview';
 
 const Back = styled.div`
   position: absolute;
@@ -7,13 +8,12 @@ const Back = styled.div`
   border-radius: inherit;
   backface-visibility: hidden;
   transform: rotateY(180deg);
-  background: ${(props) => props.theme.resumeButtonBG}
 `;
 
 export default function CardBack() {
   return (
     <Back>
-      <h1>Back</h1>
+      <ProjectOverview />
     </Back>
   );
 }

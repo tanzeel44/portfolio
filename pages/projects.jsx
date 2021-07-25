@@ -23,6 +23,13 @@ const ProjectList = styled.div`
   }
 `;
 
+const projects = [
+  { odinWeather: { title: 'Where In The World', image: 'countries' } },
+  { odinWeather: { title: 'Odin Weather', image: 'odinweather' } },
+  { odinLibrary: { title: 'Odin Library', image: 'odinlibrary' } },
+  { expressLibrary: { title: 'Express Library', image: 'expresslibrary' } },
+];
+
 export default function Projects() {
   return (
     <ProjectList>
@@ -33,7 +40,7 @@ export default function Projects() {
         My Projects
       </h1>
       <div className="card-container">
-        <ProjectCard title="Weather" imageFileName="weather_mobile" />
+        <ProjectCard title="Odin Weather" imageFileName="odinweather" />
       </div>
     </ProjectList>
   );

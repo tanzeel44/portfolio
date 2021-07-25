@@ -12,7 +12,7 @@ const Front = styled.div`
 
   img {
     object-fit: cover;
-    object-position: top left;
+    object-position: center;
     opacity: 0.2;
     width: 100%;
     height: 100%;
@@ -37,7 +37,7 @@ export default function CardFront({ title, imageFileName }) {
         <h1>{title}</h1>
       </div>
       <img
-        src={`/screen_captures/${imageFileName}.png`}
+        src={`/screen_captures/${imageFileName}_dt.png`}
         alt={title}
       />
     </Front>

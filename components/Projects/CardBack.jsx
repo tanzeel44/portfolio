@@ -5,8 +5,9 @@ const Back = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-  border-radius: inherit;
+  border-radius: inherit;    
   backface-visibility: hidden;
+  transform-style: preserve-3d;
   transform: rotateY(180deg);
 `;
 

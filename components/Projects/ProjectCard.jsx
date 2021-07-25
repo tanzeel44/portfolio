@@ -24,6 +24,7 @@ const Card = styled.div`
     height: 100%;
     border-radius: inherit;
     transition: box-shadow 0.5s, transform 0.8s ease-in 0.7s;
+    backface-visibility: hidden;
     transform-style: preserve-3d;
   }
   

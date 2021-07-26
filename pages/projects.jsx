@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+import FlipCard from '../components/Projects/FlipCard';
 
 import ProjectCard from '../components/Projects/ProjectCard';
 
@@ -40,7 +41,8 @@ export default function Projects() {
         My Projects
       </h1>
       <div className="card-container">
-        <ProjectCard title="Odin Weather" imageFileName="odinweather" />
+        {/* <ProjectCard title="Odin Weather" imageFileName="odinweather" /> */}
+        <FlipCard />
       </div>
     </ProjectList>
   );

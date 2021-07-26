@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import Carousel from './Carousel';
 
 const Back = styled.div`
-  position: absolute;
   height: 100%;
   width: 100%;
   border-radius: inherit;    
@@ -10,12 +8,20 @@ const Back = styled.div`
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transform: rotateY(180deg);
+  transition: transform: 0.7s;
+
+  button {
+    cursor: pointer;
+    transform: translateZ(1px);
+    backface-visibility: hidden;
+    z-index: 200;
+  }
 `;
 
 export default function CardBack() {
   return (
     <Back>
-      <Carousel />
+      <button type="button" onClick={() => alert('test')}>test</button>
     </Back>
   );
 }

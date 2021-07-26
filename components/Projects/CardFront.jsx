@@ -2,14 +2,17 @@ import styled from 'styled-components';
 
 const Front = styled.div`
   position: absolute;
+  top: 0;
+  left: 0;
   border-radius: inherit;
   height: 100%;
-  width: 100%;
-  border-radius: inherit;    
+  width: 100%;   
   backface-visibility: hidden;
-  transform-style: preserve-3d;
+  box-shadow: inherit;
   font-family: inherit;
+  transition: transform: 0.7s;
   font-size: 3em;
+  cursor: pointer;
 
   img {
     object-fit: cover;
@@ -23,7 +26,7 @@ const Front = styled.div`
   h1 {
     position: absolute;
     font-size: 3rem;
-    z-index: 2;
+
     top: calc(50% - 1.5rem);
     left: 0;
     right: 0;

@@ -1,33 +1,33 @@
 import { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+
 const StyledCarousel = styled.div`
   width: 100%;
   height: 100%;
-  position: relative;
-  border-radius: inherit;
-
-  button {
-    cursor: pointer;
-    z-index: 20000;
-  }
-
 `;
 
 export default function Carousel() {
   const [index, setIndex] = useState(0);
 
-  const toShow = [];
-
   const carouselNavigation = (targetIndex) => {
-    console.log('test');
-    alert('test 2');
+    if (targetIndex < 0) {
+      setIndex(3);
+    } else if (targetIndex > 3) {
+      setIndex(0);
+    } else {
+      setIndex(targetIndex);
+    }
   };
 
   return (
     <StyledCarousel>
-      <h1>{index}</h1>
-      <button type="button" onClick={() => setIndex(index + 1)}>+</button>
-      <button type="button" onClick={() => setIndex(index - 1)}>-</button>
+      <h1 className="index">
+        {index + 1}
+        {' '}
+        / 4
+      </h1>
+      <button className="btn-next" type="button" onClick={() => carouselNavigation(index + 1)}>&#10095;</button>
+      <button className="btn-prev" type="button" onClick={() => carouselNavigation(index - 1)}>&#10094;</button>
     </StyledCarousel>
   );
 }

@@ -1,50 +1,74 @@
 import styled from 'styled-components';
+import Carousel from './Carousel';
 
-import CardFront from './CardFront';
-import CardBack from './CardBack';
+const StyledCard = styled.div`
+  height: 260px;
+  width: 260px;
+  border-radius: 12px;
 
-const Card = styled.div`
-  font-family: inherit;
-  height: 250px;
-  width: 250px;
-  position: relative;
-  perspective: 1000px;
-  border-radius: 10px;
-  background-color: transparent;
-  border-radius: 10px;
-
-  @media only screen and (min-width: 375px) {
-    width: 320px;
+  .card {
     height: 320px;
-  }
-
-  .container {
-    height: 100%;
-    width: 100%;
-    transition: box-shadow 0.5s, transform 0.8s ease-in 0.7s;
+    width: 320px;
+    border-radius: inherit;
+    transition: transform 1.7s;
     transform-style: preserve-3d;
     backface-visibility: hidden;
-    border-radius: inherit;
-    transform-style: preserve-3d;
-  }
-  
-  &:hover .container {
-    box-shadow: 0 0 20px ${(props) => props.theme.cardShadow};
   }
 
-  &hover .front {
+  .face {
+    height: 100%;
+    width: 100%;
+    border-radius:inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    cursor: pointer;
+  }
+
+  .front {
+    background-color: #28c7fa;
+    padding: 1rem;
+    transition: transform 1.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-title {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    transition: transform 1.7s;
+  }
+
+  &:hover .front {
+    box-shadow: 0 0 20px ${(props) => props.theme.cardShadow};
     transform: rotateY(-180deg);
-    transition: transform 0.7s;
+    transition: box-shadow 0.5s, transform 0.7s ease-in 0.5s;
+  }
+
+  &:hover .back {
+    box-shadow: 0 0 20px ${(props) => props.theme.cardShadow};
+    transform: rotateY(0deg);
+    transition: box-shadow 0.5s, transform 0.7s ease-in 0.5s;
   }
 `;
 
-export default function ProjectCard({ title, imageFileName }) {
+export default function FlipCard() {
   return (
-    <Card>
-      <div className="container">
-        <CardFront className="front" {...{ title, imageFileName }} />
-        <CardBack className="back" />
+    <StyledCard>
+      <div className="card">
+        <div className="face front">
+          <h1 className="project-title">Where In The World</h1>
+        </div>
+        <div className="face back">
+          <Carousel />
+        </div>
       </div>
-    </Card>
+    </StyledCard>
   );
 }

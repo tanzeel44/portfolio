@@ -9,7 +9,7 @@ const StyledCard = styled.div`
     height: 320px;
     width: 320px;
     border-radius: inherit;
-    transition: transform 1s;
+    transition: transform 1.7s;
     transform-style: preserve-3d;
     backface-visibility: hidden;
   }
@@ -27,23 +27,25 @@ const StyledCard = styled.div`
 
   .front {
     background-color:blueviolet;
-    transition: transform 0.5s;
+    transition: transform 1.7s;
   }
 
   .back {
     transform: rotateY(180deg);
-    transition: transform 0.5s;
+    transition: transform 1.7s;
     background-color: #ff304f;
   }
 
   &:hover .front {
+    box-shadow: 0 0 20px ${(props) => props.theme.cardShadow};
     transform: rotateY(-180deg);
-    transition: transform 0.5s;
+    transition: box-shadow 0.5s, transform 0.7s ease-in 0.5s;
   }
 
   &:hover .back {
+    box-shadow: 0 0 20px ${(props) => props.theme.cardShadow};
     transform: rotateY(0deg);
-    transition: transform 0.5s;
+    transition: box-shadow 0.5s, transform 0.7s ease-in 0.5s;
   }
 `;
 

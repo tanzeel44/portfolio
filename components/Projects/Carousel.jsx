@@ -4,6 +4,39 @@ import styled, { keyframes } from 'styled-components';
 const StyledCarousel = styled.div`
   width: 100%;
   height: 100%;
+  padding: 1rem;
+
+  .btn-prev,
+  .btn-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.125rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-prev {
+    left: 0;
+  }
+
+  .btn-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .btn-prev:hover,
+  .btn-next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
 `;
 
 export default function Carousel() {

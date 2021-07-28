@@ -9,6 +9,14 @@ const ProjectList = styled.div`
   font-family: ${(props) => props.theme.fonts.main};
   padding: 0 0.5rem;
   
+  .headings {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
   .heading,
   .instructions {
     text-align: center;
@@ -17,19 +25,42 @@ const ProjectList = styled.div`
 
   .heading {
     font-size: 2.25rem;
-    @media only screen and (min-width: 540px) and (max-width: 991px) {
+
+    @media only screen and (min-width: 540px) and (max-width: 767px) {
       font-size: 3rem;
+    }
+    
+    @media only screen and (min-width: 768px) and (max-width: 1023px){
+      font-size: 5rem;
+      padding-top: 1rem;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      font-size: 6rem;
+      padding-top: 1rem;
     }
   }
 
   .instructions {
     font-size: 0.8rem;
+    
+    @media only screen and (min-width: 992px) {
+      font-size: 1.25rem;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1023px){
+      font-size: 1.333rem;
+    }
+    
+    @media only screen and (min-width: 1024px) {
+      font-size: 1.666rem;
+    }
+
   }
 
-  // subtract all above from 100% 
   .projects-container {
     width: 100%;
-    height: calc(100% - 2rem - 2.25rem - 1.6rem);
+    height: calc(80%);
     border: 1px solid red;
   }
 `;
@@ -47,12 +78,14 @@ export default function Projects() {
       <Head>
         <title>My Projects</title>
       </Head>
-      <h1 className="heading">
-        My Projects
-      </h1>
-      <h2 className="instructions">
-        Tap, Click, or Hover Over a Project Tile For More Details
-      </h2>
+      <div className="headings">
+        <h1 className="heading">
+          My Projects
+        </h1>
+        <h2 className="instructions">
+          Tap, Click, or Hover Over a Project Tile For More Details
+        </h2>
+      </div>
       <div className="projects-container" />
     </ProjectList>
   );

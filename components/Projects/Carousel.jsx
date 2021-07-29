@@ -10,9 +10,8 @@ const StyledCarousel = styled.div`
   .btn-next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
     width: auto;
-    margin-top: -22px;
+    bottom: 16px;
     padding: 16px;
     color: #fff;
     font-weight: bold;

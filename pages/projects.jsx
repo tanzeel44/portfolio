@@ -55,7 +55,6 @@ const ProjectList = styled.div`
     @media only screen and (min-width: 1024px) {
       font-size: 1.666rem;
     }
-
   }
 
   .projects-container {

@@ -2,17 +2,28 @@ import styled from 'styled-components';
 import Carousel from './Carousel';
 
 const StyledCard = styled.div`
-  height: 260px;
-  width: 260px;
+  height: 250px;
+  width: 250px;
   border-radius: 12px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 768px) {
+    height: 300px;
+    width: 300px;
+  }
 
   .card {
-    height: 320px;
-    width: 320px;
+    height: 250px;
+    width: 250px;
     border-radius: inherit;
     transition: transform 1.7s;
     transform-style: preserve-3d;
     backface-visibility: hidden;
+    
+    @media only screen and (min-width: 768px) {
+      height: 300px;
+      width: 300px;
+    }
   }
 
   .face {

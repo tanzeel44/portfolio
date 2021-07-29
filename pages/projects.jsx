@@ -59,10 +59,29 @@ const ProjectList = styled.div`
   }
 
   .projects-container {
-    width: 100%;
-    height: calc(80%);
-    border: 1px solid red;
-  }
+    height: 80%;
+    padding-top: 1rem;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 1rem;
+
+    @media only screen and (min-width: 540px) and (max-width: 991px) {
+      grid-template-columns: 50% 50%;
+    }
+    
+    @media only screen and (min-width: 540px) and (max-width: 991px) {
+      grid-template-columns: 50% 50%;
+    }
+    
+    @media only screen and (min-width: 992px) and (max-width: 1279px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media only screen and (min-width: 1280px) {
+      padding-top: 6rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
 `;
 
 const projects = [
@@ -86,7 +105,11 @@ export default function Projects() {
           Tap, Click, or Hover Over a Project Tile For More Details
         </h2>
       </div>
-      <div className="projects-container" />
+      <div className="projects-container">
+        {projects.map(
+          (project) => <FlipCard key={project.title} title={project.title} image={project.image} />,
+        )}
+      </div>
     </ProjectList>
   );
 }

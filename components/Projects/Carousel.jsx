@@ -4,7 +4,15 @@ import styled, { keyframes } from 'styled-components';
 const StyledCarousel = styled.div`
   width: 100%;
   height: 100%;
-  padding: 1rem;
+  position: relative;
+
+  .index {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 20;
+    color: #fff;
+  }
 
   .btn-prev,
   .btn-next {
@@ -21,6 +29,7 @@ const StyledCarousel = styled.div`
     user-select: none;
     border: none;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
   }
 
   .btn-prev {
@@ -35,6 +44,31 @@ const StyledCarousel = styled.div`
   .btn-prev:hover,
   .btn-next:hover {
     background-color: rgba(0,0,0,0.8);
+  }
+
+  .placeholder-slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.75s ease-in;
+    z-index: 19;
+  }
+
+  .placeholder-slide:nth-of-type(1) {
+    background-color: #254611 ;
+  }
+
+  .placeholder-slide:nth-of-type(2) {
+    background-color: #987545 ;
+  }
+
+  .placeholder-slide:nth-of-type(3) {
+    background-color: #545466 ;
+  }
+
+  .placeholder-slide:nth-of-type(4) {
+    background-color: #778825 ;
   }
 `;
 
@@ -60,6 +94,10 @@ export default function Carousel() {
       </h1>
       <button className="btn-next" type="button" onClick={() => carouselNavigation(index + 1)}>&#10095;</button>
       <button className="btn-prev" type="button" onClick={() => carouselNavigation(index - 1)}>&#10094;</button>
+      <div style={{ opacity: index === 0 ? 1 : 0 }} className="placeholder-slide" />
+      <div style={{ opacity: index === 1 ? 1 : 0 }} className="placeholder-slide" />
+      <div style={{ opacity: index === 2 ? 1 : 0 }} className="placeholder-slide" />
+      <div style={{ opacity: index === 3 ? 1 : 0 }} className="placeholder-slide" />
     </StyledCarousel>
   );
 }

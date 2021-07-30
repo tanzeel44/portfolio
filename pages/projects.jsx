@@ -68,11 +68,7 @@ const ProjectList = styled.div`
     @media only screen and (min-width: 540px) and (max-width: 991px) {
       grid-template-columns: 50% 50%;
     }
-    
-    @media only screen and (min-width: 540px) and (max-width: 991px) {
-      grid-template-columns: 50% 50%;
-    }
-    
+      
     @media only screen and (min-width: 992px) and (max-width: 1279px) {
       grid-template-columns: repeat(3, 1fr);
     }

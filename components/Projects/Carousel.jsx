@@ -15,9 +15,9 @@ const StyledCarousel = styled.div`
   .index {
     position: absolute;
     top: 1.25rem;
-    left: 40%;
+    right: 1rem;
     z-index: 20;
-    color: #fff;
+    color: #002651;
   }
 
   .btn-prev,

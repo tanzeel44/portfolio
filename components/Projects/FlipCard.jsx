@@ -40,15 +40,15 @@ const StyledCard = styled.div`
   .front {
     padding: 1rem;
     transition: transform 1.7s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #28c7fa;
+    color: #002651;
   }
   
   .project-title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 1.444rem;
+    @media only screen and (min-width: 768px) {
+      font-size: 1.75rem;
+    }
   }
 
   .back {
@@ -75,6 +75,11 @@ export default function FlipCard({ title, image }) {
       <div className="card">
         <div
           className="face front"
+          style={{
+            background: `url('/screen_captures/${image}_dt.png') no-repeat center center`,
+            backgroundSize: '100% auto',
+            backgroundColor: '#ccc',
+          }}
         >
           <h1 className="project-title">{title}</h1>
         </div>

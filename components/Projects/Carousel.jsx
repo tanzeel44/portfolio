@@ -80,8 +80,7 @@ export default function Carousel({ title, image }) {
     <StyledCarousel>
       <h1 className="index">
         {index + 1}
-        {' '}
-        / 4
+        /4
       </h1>
       <button className="btn-next" type="button" onClick={() => carouselNavigation(index + 1)}>&#10095;</button>
       <button className="btn-prev" type="button" onClick={() => carouselNavigation(index - 1)}>&#10094;</button>

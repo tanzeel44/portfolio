@@ -111,7 +111,7 @@ export default function Intro() {
       <motion.h3
         variants={headingVariants}
       >
-        Based in Toronto, ON
+        Based in Toronto, Canada
       </motion.h3>
       <motion.div
         className="link-container"

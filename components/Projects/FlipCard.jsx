@@ -38,12 +38,12 @@ const StyledCard = styled.div`
   }
 
   .front {
-    background-color: #28c7fa;
     padding: 1rem;
     transition: transform 1.7s;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #28c7fa;
   }
   
   .project-title {
@@ -73,7 +73,9 @@ export default function FlipCard({ title, image }) {
   return (
     <StyledCard>
       <div className="card">
-        <div className="face front">
+        <div
+          className="face front"
+        >
           <h1 className="project-title">{title}</h1>
         </div>
         <div className="face back">

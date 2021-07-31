@@ -4,12 +4,18 @@ import styled, { keyframes } from 'styled-components';
 const StyledCarousel = styled.div`
   width: 100%;
   height: 100%;
+  background-color: #f5f5f5;
+  border-radius: inherit;
   position: relative;
+
+  & > * {
+    border-radius: inherit;
+  }
 
   .index {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 1.25rem;
+    left: 40%;
     z-index: 20;
     color: #fff;
   }
@@ -53,26 +59,11 @@ const StyledCarousel = styled.div`
     top: 0;
     transition: opacity 0.75s ease-in;
     z-index: 19;
-  }
-
-  .placeholder-slide:nth-of-type(1) {
-    background-color: #254611 ;
-  }
-
-  .placeholder-slide:nth-of-type(2) {
-    background-color: #987545 ;
-  }
-
-  .placeholder-slide:nth-of-type(3) {
-    background-color: #545466 ;
-  }
-
-  .placeholder-slide:nth-of-type(4) {
-    background-color: #778825 ;
+    object-fit: contain;
   }
 `;
 
-export default function Carousel() {
+export default function Carousel({ title, image }) {
   const [index, setIndex] = useState(0);
 
   const carouselNavigation = (targetIndex) => {
@@ -96,8 +87,18 @@ export default function Carousel() {
       <button className="btn-prev" type="button" onClick={() => carouselNavigation(index - 1)}>&#10094;</button>
       <div style={{ opacity: index === 0 ? 1 : 0 }} className="placeholder-slide" />
       <div style={{ opacity: index === 1 ? 1 : 0 }} className="placeholder-slide" />
-      <div style={{ opacity: index === 2 ? 1 : 0 }} className="placeholder-slide" />
-      <div style={{ opacity: index === 3 ? 1 : 0 }} className="placeholder-slide" />
+      <img
+        style={{ opacity: index === 2 ? 1 : 0 }}
+        className="placeholder-slide"
+        src={`/screen_captures/${image}_dt_mac.png`}
+        alt={title}
+      />
+      <img
+        style={{ opacity: index === 3 ? 1 : 0 }}
+        className="placeholder-slide"
+        src={`/screen_captures/${image}_mobile.png`}
+        alt={title}
+      />
     </StyledCarousel>
   );
 }

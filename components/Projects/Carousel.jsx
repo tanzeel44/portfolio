@@ -57,7 +57,7 @@ const StyledCarousel = styled.div`
 `;
 
 export default function Carousel({
-  title, image, tech, github, overview, url,
+  title, image, tech, github, summary, url,
 }) {
   const [index, setIndex] = useState(0);
 
@@ -82,7 +82,7 @@ export default function Carousel({
         />
       </div>
       <div style={{ opacity: index === 1 ? 1 : 0 }} className="slide">
-        <ProjectSummary />
+        <ProjectSummary summary={summary} />
       </div>
       <img
         style={{ opacity: index === 2 ? 1 : 0 }}

@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import Button from '../Button';
-
 const Overview = styled.div`
   height: 100%;
   width: 100%;

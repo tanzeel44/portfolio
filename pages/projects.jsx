@@ -104,7 +104,7 @@ export default function Projects() {
               image={project.image}
               tech={project.tech}
               github={project.github}
-              overview={project.overview}
+              summary={project.summary}
               url={project.url}
             />
           ),

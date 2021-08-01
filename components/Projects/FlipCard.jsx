@@ -69,7 +69,9 @@ const StyledCard = styled.div`
   }
 `;
 
-export default function FlipCard({ title, image }) {
+export default function FlipCard({
+  title, image, tech, github, overview, url,
+}) {
   return (
     <StyledCard>
       <div className="card">
@@ -84,7 +86,10 @@ export default function FlipCard({ title, image }) {
           <h1 className="project-title">{title}</h1>
         </div>
         <div className="face back">
-          <Carousel {...{ title, image }} />
+          <Carousel {...{
+            title, image, tech, github, overview, url,
+          }}
+          />
         </div>
       </div>
     </StyledCard>

@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+
+import projects from '../data/projectList';
 import FlipCard from '../components/Projects/FlipCard';
 
 const ProjectList = styled.div`
@@ -79,13 +81,6 @@ const ProjectList = styled.div`
     }
 `;
 
-const projects = [
-  { title: 'Where In The World', image: 'countries' },
-  { title: 'Odin Weather', image: 'odinweather' },
-  { title: 'Odin Library', image: 'odinlibrary' },
-  { title: 'Express Library', image: 'expresslibrary' },
-];
-
 export default function Projects() {
   return (
     <ProjectList>
@@ -102,7 +97,17 @@ export default function Projects() {
       </div>
       <div className="projects-container">
         {projects.map(
-          (project) => <FlipCard key={project.title} title={project.title} image={project.image} />,
+          (project) => (
+            <FlipCard
+              key={project.title}
+              title={project.title}
+              image={project.image}
+              tech={project.tech}
+              github={project.github}
+              overview={project.overview}
+              url={project.url}
+            />
+          ),
         )}
       </div>
     </ProjectList>

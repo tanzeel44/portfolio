@@ -4,7 +4,7 @@ const Summary = styled.div`
   height: 100%;
   width: 100%;
   border-radius: inherit;
-  background-color: ${(props) => props.theme.projectCardBG}
+  background-color: purple;
 `;
 
 export default function ProjectSummary() {

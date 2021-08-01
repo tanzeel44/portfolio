@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import ProjectOverview from './ProjectOverview';
+import ProjectSummary from './ProjectSummary';
 
 const StyledCarousel = styled.div`
   width: 100%;
@@ -10,14 +12,6 @@ const StyledCarousel = styled.div`
 
   & > * {
     border-radius: inherit;
-  }
-
-  .index {
-    position: absolute;
-    top: 1.25rem;
-    right: 1rem;
-    z-index: 20;
-    color: #002651;
   }
 
   .btn-prev,
@@ -52,18 +46,19 @@ const StyledCarousel = styled.div`
     background-color: rgba(0,0,0,0.8);
   }
 
-  .placeholder-slide {
+  .slide {
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     transition: opacity 0.75s ease-in;
-    z-index: 19;
     object-fit: contain;
   }
 `;
 
-export default function Carousel({ title, image }) {
+export default function Carousel({
+  title, image, tech, github, overview, url,
+}) {
   const [index, setIndex] = useState(0);
 
   const carouselNavigation = (targetIndex) => {
@@ -78,23 +73,26 @@ export default function Carousel({ title, image }) {
 
   return (
     <StyledCarousel>
-      <h1 className="index">
-        {index + 1}
-        /4
-      </h1>
       <button className="btn-next" type="button" onClick={() => carouselNavigation(index + 1)}>&#10095;</button>
       <button className="btn-prev" type="button" onClick={() => carouselNavigation(index - 1)}>&#10094;</button>
-      <div style={{ opacity: index === 0 ? 1 : 0 }} className="placeholder-slide" />
-      <div style={{ opacity: index === 1 ? 1 : 0 }} className="placeholder-slide" />
+      <div style={{ opacity: index === 0 ? 1 : 0 }} className="slide">
+        <ProjectOverview {...{
+          title, tech, url, github,
+        }}
+        />
+      </div>
+      <div style={{ opacity: index === 1 ? 1 : 0 }} className="slide">
+        <ProjectSummary />
+      </div>
       <img
         style={{ opacity: index === 2 ? 1 : 0 }}
-        className="placeholder-slide"
+        className="slide"
         src={`/screen_captures/${image}_dt_mac.png`}
         alt={title}
       />
       <img
         style={{ opacity: index === 3 ? 1 : 0 }}
-        className="placeholder-slide"
+        className="slide"
         src={`/screen_captures/${image}_mobile.png`}
         alt={title}
       />

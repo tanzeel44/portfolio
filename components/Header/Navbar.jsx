@@ -59,7 +59,7 @@ export default function Navbar({
   open, setNavOpen, darkMode, toggleDarkMode,
 }) {
   // control when menu animations are on and when they aren't
-  const [animationOff, setAnimationOff] = useState(true);
+  const [animationOff, setAnimationOff] = useState(false);
 
   // pause menu transition and close menu during viewport resizing
   useEffect(() => {

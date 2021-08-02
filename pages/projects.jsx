@@ -78,6 +78,36 @@ const ProjectList = styled.div`
     @media only screen and (min-width: 1280px) {
       padding-top: 6rem;
       grid-template-columns: repeat(4, 1fr);
+      height: 70%;
+    }
+
+    .seemore {
+      text-align: center;
+      font-size: 1.4rem;
+      @media only screen and (min-width: 540px) and (max-width: 991px) {
+        font-size: 1.666rem;
+        grid-column: span 2;
+      }
+        
+      @media only screen and (min-width: 992px) and (max-width: 1279px) {
+        grid-column: span 3;
+        font-size: 2rem;
+      }
+  
+      @media only screen and (min-width: 1280px) {
+        grid-column: span 4;
+        font-size: 3rem;
+      }
+    }
+
+    .gitlink:hover {
+      text-decoration: underline;
+    }
+
+    .gitlink,
+    .gitlink:visited {
+      color: ${(props) => props.theme.headerText};
+      text-decoration: none;
     }
 `;
 
@@ -109,6 +139,11 @@ export default function Projects() {
             />
           ),
         )}
+        <h2 className="seemore">
+          See More On
+          {' '}
+          <a className="gitlink" href="https://www.github.com/dw44" target="_blank" rel="noreferrer">Github</a>
+        </h2>
       </div>
     </ProjectList>
   );

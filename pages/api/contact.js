@@ -12,13 +12,10 @@ export default function (req, res) {
 
   return new Promise((resolve, reject) => {
     sgMail.send(mail)
-      .then(() => {
-        console.log(mail);
-        return res.status(200).end;
-      })
+      .then(() => res.status(200).end())
       .catch(() => {
         console.log('error');
-        return res.status(500).end;
+        return res.end();
       });
   });
 }

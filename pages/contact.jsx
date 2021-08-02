@@ -30,7 +30,7 @@ export default function contact() {
     callback(event.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const data = {
@@ -39,7 +39,7 @@ export default function contact() {
       message,
     };
 
-    fetch('/api/contact', {
+    await fetch('/api/contact', {
       method: 'POST',
       headers: {
         Accept: 'application/json, text/plain, */*',

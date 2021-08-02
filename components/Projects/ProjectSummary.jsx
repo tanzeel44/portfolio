@@ -13,6 +13,7 @@ const Summary = styled.div`
     text-align: center;
     padding-bottom: 4px;
     border-bottom: 1px solid #ccc;
+    color: #002651;
     @media only screen and (min-width: 992px) {
       font-size: 1.5rem;
     }
@@ -24,8 +25,8 @@ const SummaryText = styled.div`
   font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
-  color: #002651;
   z-index: 21;
+  color: #002651;
 
   ::-webkit-scrollbar {
     width: 0.25rem;

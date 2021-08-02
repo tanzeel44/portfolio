@@ -24,6 +24,7 @@ const SummaryText = styled.div`
   font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
+  color: #002651;
   z-index: 21;
 
   ::-webkit-scrollbar {

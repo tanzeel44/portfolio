@@ -148,7 +148,7 @@ export default function AboutMe() {
         >
           <div>
             <p>
-              Hi, my name is Tanzeel and I&apos;m a Full Stack Web Application Developer based in Toronto, Canada. Over the last three years, I have steadily worked to polish my skillset, and build a portfolio of projects, with a focus on web application development.
+              Hi, my name is Tanzeel and I&apos;m a Full Stack Web Application Developer. I&apos;m currently based in Toronto, Canada but able to relocate anywhere within Canada on short notice. Over the last three years, I have steadily worked to polish my skillset, and build a portfolio of projects, with a focus on web application development.
             </p>
             <br />
             <p>
@@ -156,7 +156,7 @@ export default function AboutMe() {
             </p>
             <br />
             <p>
-              When I&apos;m not coding, I enjoy cooking, running, following esports, and creating some truly mind boggling playlists for my workouts (&quot;Wu Tang Clan&quot; and &quot;Amon Amarth&quot; anyone?).
+              When I&apos;m not coding, I enjoy cooking, running, following esports, and creating some truly creative playlists for my workouts.
             </p>
             <br />
           </div>

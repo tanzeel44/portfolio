@@ -101,6 +101,12 @@ export default function contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!name.trim().length || !message.trim().length) {
+      // eslint-disable-next-line no-alert
+      alert('Name and Message fields can\'t be empty.');
+      return;
+    }
+
     const data = {
       name,
       email,
